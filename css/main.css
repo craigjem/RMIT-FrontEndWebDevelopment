@@ -1,9 +1,10 @@
 /* Media Query and Responsive Design for Desktop Browser */
-.navigation {
+.container {
     display: flex;
     flex-flow: row wrap;
     /* This aligns items to the end line on main-axis */
     justify-content: flex-end;
+    border: 5px solid green;
   }
   
   /* Media Query and Responsive Design for Medium Size Screens up to 800px */
@@ -23,37 +24,9 @@
   }
 
 
+.information { border: 2px solid blue; }
+.main { border: 2px solid blue; }
+.avatar { border: 2px solid blue; }
+.menuButton { border: 2px solid blue; }
 
 
-
-
-
-
-
-
-
-
-
-.information { grid-area: article; }
-.main { grid-area: main; }
-.avatar { grid-area: right; }
-.menuButton { grid-area: menu; }
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer footer'
-    'article';
-  grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
-}
-
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
