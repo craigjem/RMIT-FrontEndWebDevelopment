@@ -1,3 +1,7 @@
+
+/* importing libraries */
+import { Avatar } from "@udacity/veritas-components";
+
 /* Media Query and Responsive Design for Desktop Browser */
 .container {
     display: flex;
