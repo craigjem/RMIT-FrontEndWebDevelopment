@@ -34,18 +34,18 @@
 
 
 
-.item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
-.item4 { grid-area: right; }
-.item5 { grid-area: footer; }
+.information { grid-area: article; }
+.main { grid-area: main; }
+.avatar { grid-area: right; }
+.menuButton { grid-area: menu; }
 
 .grid-container {
   display: grid;
   grid-template-areas:
     'header header header header header header'
     'menu main main main right right'
-    'menu footer footer footer footer footer';
+    'menu footer footer footer footer footer'
+    'article';
   grid-gap: 10px;
   background-color: #2196F3;
   padding: 10px;
