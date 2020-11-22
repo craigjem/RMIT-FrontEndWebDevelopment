@@ -31,21 +31,39 @@
 
 
 .blogHeader {
-   display: flex;
-   flex-flow: column wrap;
+   display: block;
    border: 2px solid green;
-   margin: 10% 20%;
+   margin: 7% 20% 0 18%; 
    width: auto;
-   height: auto;
+   height: 600px;
+   z-index: 1;
+}
+
+.blogHeader img {
+  width: 100%;
+  height: 100%;
 }
 
 .blogTitle {
   display: inline-block;
-  margin: -10%;
+  margin-top: -100px;
+  margin-left: 40%;
   border: 2px solid blue;
+  z-index: 9;
 }
 
 
+article p {
+  display: flex;
+  align-items: flex-start;
+  padding: 5px;
+  font-style: italic;
+  font-size: 1.2em;
+  width: 30%;
+  height: inherit;
+  margin-right: 50%;
+  border: 2px solid green;
+}
 
 #avatar-sml {
   vertical-align: middle;
@@ -55,6 +73,7 @@
 }
 
 #avatar-lge {
+  margi
   vertical-align: middle;
   width: 10%;
   height: 10%;
