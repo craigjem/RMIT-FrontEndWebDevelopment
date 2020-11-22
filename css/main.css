@@ -30,6 +30,23 @@
 .menuButton { border: 2px solid blue; }
 
 
+.blogHeader {
+   display: flex;
+   flex-flow: column wrap;
+   border: 2px solid green;
+   margin: 10% 20%;
+   width: auto;
+   height: auto;
+}
+
+.blogTitle {
+  display: inline-block;
+  margin: -10%;
+  border: 2px solid blue;
+}
+
+
+
 #avatar-sml {
   vertical-align: middle;
   width: 10%;
@@ -39,7 +56,12 @@
 
 #avatar-lge {
   vertical-align: middle;
-  width: 50%;
-  height: 50%;
+  width: 10%;
+  height: 10%;
   border-radius: 50%;
+}
+
+footer {
+  display: grid;
+
 }
