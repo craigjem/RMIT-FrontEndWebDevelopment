@@ -25,6 +25,8 @@
   }
 
 
+h1 { font-size: 16pt;}
+
 .aboutMe { border: 2px solid blue; }
 .blogTitle { border: 2px solid blue; }
 .menuButton { border: 2px solid blue; }
@@ -40,14 +42,14 @@
 }
 
 .blogHeader img {
-  width: 100%;
-  height: 100%;
+  background-size: cover;
+  z-index: 1;
 }
 
-.blogTitle {
-  display: inline-block;
-  margin-top: -100px;
-  margin-left: 40%;
+.blogTitle h1 {
+  
+  margin-top: 10%;
+  margin-left: 38%;
   border: 2px solid blue;
   z-index: 9;
 }
