@@ -11,47 +11,51 @@ body {
 .container {
   display: grid;
   width: 90vw;
-  height: 100vh;
+  /* height: 100vh; */
   margin: auto;
-  grid-template-columns: 35vw 35vw;
-  grid-template-rows: 45vh 45vh;
-  grid-gap: 15px;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 250px 600px 400px;
+  /* grid-gap: 5px; */
   grid-template-areas: 
-  "top top"
-  "bottomLeft bottomRight";
-  border: 2px solid blue;
+  "hd hd hd hd hd hd hd hd"
+  "sd sd sd main main main main main"
+  "sd sd sd main main main main main"
+  "ft ft ft ft ft ft ft ft";
+  border: 2px solid yellow;
   /* This aligns items to the end line on main-axis */
-  justify-content: center; 
+  /* justify-content: center; */ 
 }
 
 
 .box {
-   display: flex;
+   /*display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: center; */
    border: 1px solid red;
-   padding: 15px;
+   background: #F8FA9D;
+   /* padding: 15px; */
 }
 
-.blogHeader {
-  height: 100px;
+.header {
+  grid-area: hd;
 }
 
-.postCards {
-  width: 50%;
-}
-
-#one { grid-area: top; }
-#two { grid-area: bottomLeft; }
-#three { grid-area: bottomRight; } 
-#four { grid-area: bottomRight; }
-#five { grid-area: bottomRight; }
-#six { grid-area: bottom; }
-
-footer {
-  
+.footer {
+  grid-area: ft;
 
 }
+
+.sidebar {
+  grid-area: sd;
+}
+
+.content {
+  grid-area: main;
+  height: 50%;
+}
+
+
+
 
 
 
