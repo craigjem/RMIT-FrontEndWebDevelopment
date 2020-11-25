@@ -15,7 +15,7 @@ body {
   margin: auto;
   grid-template-columns: 35vw 35vw;
   grid-template-rows: 45vh 45vh;
-  grid-gap: 25px;
+  grid-gap: 15px;
   grid-template-areas: 
   "top top"
   "bottomLeft bottomRight";
@@ -35,6 +35,10 @@ body {
 
 .blogHeader {
   height: 100px;
+}
+
+.postCards {
+  width: 50%;
 }
 
 #one { grid-area: top; }
