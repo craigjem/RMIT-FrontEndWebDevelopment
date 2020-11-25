@@ -14,7 +14,7 @@ body {
   /* height: 100vh; */
   margin: auto;
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 250px 600px 400px;
+  grid-template-rows: 250px 600px;
   /* grid-gap: 5px; */
   grid-template-areas: 
   "hd hd hd hd hd hd hd hd"
@@ -50,8 +50,8 @@ body {
 }
 
 .content {
-  grid-area: main;
-  height: 50%;
+  grid-area: 2 / 1 / 2 / 4;
+  
 }
 
 
