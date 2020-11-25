@@ -1,88 +1,80 @@
 
+
+body {
+  
+  font-size: 16pt;
+
+}
+
+
 /* Media Query and Responsive Design for Desktop Browser */
 .container {
-    display: flex;
-    flex-flow: row wrap;
-    /* This aligns items to the end line on main-axis */
-    justify-content: flex-end;
-    border: 5px solid green;
-  }
+  display: grid;
+  width: 90vw;
+  height: 100vh;
+  margin: auto;
+  grid-template-columns: 35vw 35vw;
+  grid-template-rows: 45vh 45vh;
+  grid-gap: 25px;
+  grid-template-areas: 
+  "top top"
+  "bottomLeft bottomRight";
+  border: 2px solid blue;
+  /* This aligns items to the end line on main-axis */
+  justify-content: center; 
+}
+
+
+.box {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid red;
+   padding: 15px;
+}
+
+.blogHeader {
+  height: 100px;
+}
+
+#one { grid-area: top; }
+#two { grid-area: bottomLeft; }
+#three { grid-area: bottomRight; } 
+#four { grid-area: bottomRight; }
+#five { grid-area: bottomRight; }
+#six { grid-area: bottom; }
+
+footer {
   
-  /* Media Query and Responsive Design for Medium Size Screens up to 800px */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* Media Query and Responsive Design for Medium Size Screens up to 800px 
   @media all and (max-width: 800px) {
     .container {
-      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      /* When on medium sized screens, we center it by evenly distributing empty space around items 
       justify-content: space-around;
     }
   }
   
-  /* Media Query and Responsive Design for Small Size Screens including mobile devices up to 500px */
+  /* Media Query and Responsive Design for Small Size Screens including mobile devices up to 500px 
   @media all and (max-width: 500px) {
     .container {
-      /* On small screens, we are no longer using row direction but column */
+      /* On small screens, we are no longer using row direction but column 
       flex-direction: column;
     }
   }
-
-
-h1 { font-size: 16pt;}
-
-.aboutMe { border: 2px solid blue; }
-.blogTitle { border: 2px solid blue; }
-.menuButton { border: 2px solid blue; }
-
-
-.blogHeader {
-   display: block;
-   border: 2px solid green;
-   margin: 7% 20% 0 18%; 
-   width: auto;
-   height: 600px;
-   z-index: 1;
-}
-
-.blogHeader img {
-  background-size: cover;
-  z-index: 1;
-}
-
-.blogTitle h1 {
-  
-  margin-top: 10%;
-  margin-left: 38%;
-  border: 2px solid blue;
-  z-index: 9;
-}
-
-
-article p {
-  display: flex;
-  align-items: flex-start;
-  padding: 5px;
-  font-style: italic;
-  font-size: 1.2em;
-  width: 30%;
-  height: inherit;
-  margin-right: 50%;
-  border: 2px solid green;
-}
-
-#avatar-sml {
-  vertical-align: middle;
-  width: 10%;
-  height: 10%;
-  border-radius: 50%;
-}
-
-#avatar-lge {
-  margi
-  vertical-align: middle;
-  width: 10%;
-  height: 10%;
-  border-radius: 50%;
-}
-
-footer {
-  display: grid;
-
-}
+  */
