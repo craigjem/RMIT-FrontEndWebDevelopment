@@ -6,6 +6,17 @@ body {
 
 }
 
+#nestedGrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  border: 1px solid red;
+}
+
+.postCard {
+  width: 250px;
+  height: 150px;
+}
 
 /* Media Query and Responsive Design for Desktop Browser */
 .container {
