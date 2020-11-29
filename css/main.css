@@ -9,7 +9,7 @@ body {
 #nestedGrid {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 30% 70%;
   border: 1px solid red;
 }
 
@@ -29,8 +29,8 @@ body {
   /* grid-gap: 5px; */
   grid-template-areas: 
   "hd hd hd hd hd hd hd hd"
-  "sd sd sd main main main main main"
-  "sd sd sd main main main main main"
+  "main main main main main sd sd sd"
+  "main main main main main sd sd sd"
   "ft ft ft ft ft ft ft ft";
   border: 2px solid yellow;
   /* This aligns items to the end line on main-axis */
@@ -61,7 +61,7 @@ body {
 }
 
 .content {
-  grid-area: 2 / 1 / 2 / 4;
+  grid-area: main;
   
 }
 
