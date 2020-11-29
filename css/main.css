@@ -9,13 +9,16 @@ body {
 #nestedGrid {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 30% 70%;
-  border: 1px solid red;
+  grid-template-rows: 50% 50%;
+  border: 3px solid white;
+  grid-gap: 5px;
 }
 
 .postCard {
-  width: 250px;
-  height: 150px;
+  width: 390px;
+  height: 250px;
+  border: 1 solid red;
+  background: #F9FA4D;
 }
 
 /* Media Query and Responsive Design for Desktop Browser */
@@ -30,7 +33,6 @@ body {
   grid-template-areas: 
   "hd hd hd hd hd hd hd hd"
   "main main main main main sd sd sd"
-  "main main main main main sd sd sd"
   "ft ft ft ft ft ft ft ft";
   border: 2px solid yellow;
   /* This aligns items to the end line on main-axis */
@@ -39,8 +41,8 @@ body {
 
 
 .box {
-   /*display: flex;
-   align-items: center;
+   display: flex;
+  /* align-items: center; 
    justify-content: center; */
    border: 1px solid red;
    background: #F8FA9D;
@@ -63,6 +65,18 @@ body {
 .content {
   grid-area: main;
   
+}
+
+
+
+#one {
+  display: grid;
+}
+#two {
+  display: grid;
+}
+#three {
+  display: grid;
 }
 
 
