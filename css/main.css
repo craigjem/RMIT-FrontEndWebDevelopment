@@ -25,9 +25,26 @@ body {
 .postCard {
   width: 390px;
   height: 250px;
-  border: 1 solid red;
-  background: #F9FA4D;
+  border: 2 solid black;
+  background: yellow;
+  z-index: 3;
 }
+
+.postCard h3, p, i {
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.postCard i {
+  margin: 0 auto;
+  font-size: 0.80em;
+}
+
+.postCard p {
+  margin: 0 auto;
+  font-size: 0.90em;
+}
+
 
 /* Media Query and Responsive Design for Desktop Browser */
 .container {
@@ -54,12 +71,24 @@ body {
   /* align-items: center; 
    justify-content: center; */
    border: 1px solid red;
-   background: #F8FA9D;
-   /* padding: 15px; */
+   background: white;
+  /*  background: #F8FA9D;
+   padding: 15px; */
 }
 
 .header {
   grid-area: hd;
+  justify-content: center;
+  background-image: url('../images/blog-background.png');
+  background-position: stretch;
+  background-repeat: none;
+}
+
+.header h1 { 
+  color: white; 
+  font-size: 3.5em;
+  margin-top: 7%;
+  
 }
 
 .footer {
