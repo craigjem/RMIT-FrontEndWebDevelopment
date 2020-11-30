@@ -1,9 +1,17 @@
 
 
 body {
-  
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16pt;
 
+}
+
+#blogPostHeading { 
+  margin: 25px 25%; 
+  width: 500; 
+  height: 80px; 
+  border: 1px solid green;
+  z-index: 3;
 }
 
 #nestedGrid {
@@ -56,8 +64,22 @@ body {
 
 .footer {
   grid-area: ft;
-
+  justify-content: center; 
+  padding: 20px;
+  background-color: blue;
+  border: none;
 }
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.0em;
+}
+
+.footer a:hover {
+  font-size: 1.1em;
+}
+  
 
 .sidebar {
   grid-area: sd;
@@ -70,7 +92,7 @@ body {
 
 .listPost,
 .listPost ul,
-.listPost li {
+.listPost li a {
   display: block;
   margin: 10% auto;
   list-style-type: none;
@@ -94,7 +116,6 @@ body {
   margin: 3% 10%;
   
 }
-
 
 
 
