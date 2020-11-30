@@ -25,6 +25,8 @@ body {
   width: inherit;
   height: inherit;
   z-index: 3;
+  background: white;
+  
 }
 
 .postCard:hover {
@@ -56,7 +58,7 @@ body {
   /* height: 100vh; */
   margin: auto;
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 250px 650px 80px;
+  grid-template-rows: 250px 780px 80px;
   /* grid-gap: 5px; */
   grid-template-areas: 
   "hd hd hd hd hd hd hd hd"
@@ -72,8 +74,8 @@ body {
    display: flex;
    margin-top: 20px;
   /* align-items: center; 
-   justify-content: center; */
-   border: 1px solid red;
+   justify-content: center; 
+   border: 1px solid red;*/
    background: white;
   /*  background: #F8FA9D;
    padding: 15px; */
@@ -108,10 +110,6 @@ body {
   font-size: 0.90em;
 }
 
-.footer a:hover {
-  font-size: 1.1em;
-}
-  
 
 .sidebar {
   grid-area: sd;
@@ -142,18 +140,20 @@ body {
 .nextButton,
 .homeButton {
   display: inline-block;
-  margin: 10px 25%;  
-  width: 100px;
-  height: 40px;
-  border-radius: 15px;
+  margin-top: 10px;
+  margin-left: 35%;
+  margin-right: -28%;  
+  padding: 18px;
+  border-radius: 10px;
   background-color: lightblue;
   border: 1px solid lightblue;
 }
 
 .nextButton a,
 .homeButton a {
-  padding-top: 20px;
   text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
   color: azure;
   cursor: pointer;
 }
@@ -163,8 +163,21 @@ body {
   background-color: darkblue;
 }
 
+article {
+  margin: 10px 35px;
+  padding: 10px;
+  width: 85%;
+  align-items: center;
+}
 
+article p {
+  margin-top: 15px;
+  font-weight: bold;
+}
 
+.comments {
+  margin: 10px;
+}
 
 
 

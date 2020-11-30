@@ -11,7 +11,15 @@
   <div class="container">
     <div class="header box" alt="CJ's Technical Blog heading"><h1>CJ's Technical Blog</h1></div>
     <div class="sidebar box">
-      <h2 id="blogPostHeading" alt="Blog Posts">Blog Posts</h2>
+      <div class="avatar"> 
+        <img src="images/avatar.png" alt="avatar of the author of the blog">
+      </div>
+      <div id="blogMembership">
+        <a href="#">Login &nbsp;|&nbsp;<span><a href="#">Register &nbsp;</a></span></a>
+      </div>
+      <div id="blogPostHeading" alt="Blog Posts">
+        <h2>Blog Posts</h2>
+      </div>
         <ul class="listPost">
           <li><a href="#" title="Blog posts for January 2020">January 2020</a></li>
           <li><a href="#">Febuary 2020</a></li>
@@ -27,11 +35,13 @@
     </div>
     <div class="content box">
       <div id="nestedGrid">
-        <div id="one" class="postCard" onclick="window.open('posts.html');" >
-            <h3>Wonderful IT!!!</h3>
-            <p>13th November 2020</p><br>
-            <i>"Cyber Security has some issues...."</i>
-        </div>
+        <a id="one" class="postCard" href="posts.html" >
+            <h3>Public Cloud is way ahead of the ability to secure it</h3>
+            <p>November 30th 2020</p><br>
+            <article>
+              <i>"What we've seen across the board is most customers consumption of public cloud is way ahead of their ability to secure it......"</i>
+            </article>
+        </a>
         <div id="two" class="postCard" >
             <h3>Wonderful IT!!!</h3>
             <p>13th November 2020</p><br>

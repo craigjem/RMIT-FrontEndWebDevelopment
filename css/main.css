@@ -27,6 +27,8 @@ body {
   height: 250px;
   border: 2 solid black;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
   background: yellow;
   z-index: 3;
 }
@@ -36,18 +38,18 @@ body {
   transform: scale(1.1);
 }
 
-.postCard h3, p, i {
-  margin: 0 auto;
+.postCard h3, i {
+  margin: 10px auto;
   padding: 5px;
 }
 
 .postCard i {
-  margin: 0 auto;
+  padding: 10px;
   font-size: 0.80em;
 }
 
 .postCard p {
-  margin: 0 auto;
+  padding: 5px;
   font-size: 0.90em;
 }
 
@@ -75,8 +77,8 @@ body {
    display: flex;
    margin-top: 20px;
   /* align-items: center; 
-   justify-content: center; */
-   border: 1px solid red;
+   justify-content: center; 
+   border: 1px solid red;*/
    background: white;
   /*  background: #F8FA9D;
    padding: 15px; */
@@ -112,12 +114,13 @@ body {
 }
 
 .footer a:hover {
-  font-size: 1.1em;
+  font-size: 1.0em;
 }
   
 
 .sidebar {
   grid-area: sd;
+  display: block;
 }
 
 .content {
@@ -153,10 +156,27 @@ body {
 }
 
 
+article i {
+  margin: inherit;
+  padding: 10px;
+  align-items: center;
+}
 
+#blogMembership a {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-
-
+.avatar img {
+  margin-top: -150px;
+  margin-right: 5%;
+  border-radius: 50%;
+  box-shadow: 10px;
+  color: black;
+  width: 180px;
+  height: 180px;
+}
 
 
 
