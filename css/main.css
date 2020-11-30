@@ -26,8 +26,14 @@ body {
   width: 390px;
   height: 250px;
   border: 2 solid black;
+  cursor: pointer;
   background: yellow;
   z-index: 3;
+}
+
+.postCard:hover {
+  transition: transform .2s;
+  transform: scale(1.1);
 }
 
 .postCard h3, p, i {
