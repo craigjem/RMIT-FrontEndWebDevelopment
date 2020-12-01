@@ -6,15 +6,6 @@ body {
 
 }
 
-#blogPostHeading { 
-  margin-top: 25px;  
-  /* width: 500px; 
-  height: 80px; */ 
-  border: 1px solid green;
-  /* z-index: 3; */
-}
-#blogPostHeading a { justify-content: center; }
-
 #nestedGrid {
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -26,12 +17,11 @@ body {
 .postCard {
   width: 92%; /* 390px; */
   height: 85%; /* 250px; */
-  border: 2 solid black;
+  border: 2px solid black;
   cursor: pointer;
   text-decoration: none;
   color: black;
-  background: yellow;
-  z-index: 3;
+  
 }
 
 .postCard:hover {
@@ -75,8 +65,8 @@ body {
    display: flex;
    margin-top: 20px;
   /* align-items: center; 
-   justify-content: center; */
-   border: 2px solid red;
+   justify-content: center; 
+   border: 2px solid red;*/
    background: white;
   /*  background: #F8FA9D;
    padding: 15px; */
@@ -127,21 +117,30 @@ body {
   
 }
 
-.listPost {
+.blogPostHeading { 
+  display: flex;
+  margin: 0px auto; 
+}
+
+.blogPostHeading h2 { 
+  margin: 0px auto;
+  align-items: center; }
+
+#listPost {
   display: grid;
-  margin: 20px;
+  margin: 0px 40px;
   list-style-type: none;
  
 }
 
-.listPost ul,
-.listPost li a {
-  
+#listPost ul,
+#listPost li a {
+  padding: 5px;
   align-content: center;
   text-decoration: none;
 }
 
-.listPost li a:hover { font-weight: bold; color:  blue; }
+#listPost li a:hover { font-weight: bold; color:  blue; }
 
 #one,
 #two,
@@ -164,7 +163,7 @@ article i {
   padding: 10px;
   align-items: center;
 }
-#blogMembership { margin-left: 30px; }
+#blogMembership { margin: -40px 0 0 30px; }
 #blogMembership a {
   font-size: 1.2em;
   font-weight: bold;
@@ -183,13 +182,17 @@ article i {
 
 #biography {
   display: flex;
-  padding: 10px;
-  
+  margin-top: -50px;
+  padding: 0px 12px;
+  height: 200px;
 }
 
 #biography p {
+  
   font-style: italic;
   align-content: center;
+  
+  
 }
 
 
