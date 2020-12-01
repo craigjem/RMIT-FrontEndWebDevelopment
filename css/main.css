@@ -7,24 +7,25 @@ body {
 }
 
 #blogPostHeading { 
-  margin: 25px 25%; 
-  width: 500; 
-  height: 80px; 
+  margin-top: 25px;  
+  /* width: 500px; 
+  height: 80px; */ 
   border: 1px solid green;
-  z-index: 3;
+  /* z-index: 3; */
 }
+#blogPostHeading a { justify-content: center; }
 
 #nestedGrid {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 50% 50%;
   border: 3px solid white;
-  grid-gap: 15px;
+  grid-gap: 10px;
 }
 
 .postCard {
-  width: 390px;
-  height: 250px;
+  width: 92%; /* 390px; */
+  height: 85%; /* 250px; */
   border: 2 solid black;
   cursor: pointer;
   text-decoration: none;
@@ -38,14 +39,9 @@ body {
   transform: scale(1.1);
 }
 
-.postCard h3, i {
+.postCard h3 {
   margin: 10px auto;
   padding: 5px;
-}
-
-.postCard i {
-  padding: 10px;
-  font-size: 0.80em;
 }
 
 .postCard p {
@@ -53,8 +49,11 @@ body {
   font-size: 0.90em;
 }
 
+.postCard i {
+  margin-top: -100px;
+  font-size: 0.80em;
+}
 
-/* Media Query and Responsive Design for Desktop Browser */
 .container {
   display: grid;
   width: 90vw;
@@ -72,13 +71,12 @@ body {
   /* justify-content: center; */ 
 }
 
-
 .box {
    display: flex;
    margin-top: 20px;
   /* align-items: center; 
-   justify-content: center; 
-   border: 1px solid red;*/
+   justify-content: center; */
+   border: 2px solid red;
    background: white;
   /*  background: #F8FA9D;
    padding: 15px; */
@@ -120,7 +118,8 @@ body {
 
 .sidebar {
   grid-area: sd;
-  display: block;
+  display: grid;
+  
 }
 
 .content {
@@ -128,30 +127,34 @@ body {
   
 }
 
-.listPost,
-.listPost ul,
-.listPost li a {
-  display: block;
-  margin: 10% auto;
+.listPost {
+  display: grid;
+  margin: 20px;
   list-style-type: none;
-  text-decoration: none;
-  
-  
+ 
 }
 
+.listPost ul,
+.listPost li a {
+  
+  align-content: center;
+  text-decoration: none;
+}
+
+.listPost li a:hover { font-weight: bold; color:  blue; }
 
 #one,
 #two,
 #three {
   /*display: grid;*/
-  margin: 10% 10%;
+  margin: 5% 5%;
 }
 #four,
 #five,
 #six
  {
   /*display: grid;*/
-  margin: 3% 10%;
+  margin: 3% 5%;
   
 }
 
@@ -161,7 +164,7 @@ article i {
   padding: 10px;
   align-items: center;
 }
-
+#blogMembership { margin-left: 30px; }
 #blogMembership a {
   font-size: 1.2em;
   font-weight: bold;
@@ -170,7 +173,7 @@ article i {
 
 .avatar img {
   margin-top: -150px;
-  margin-right: 5%;
+  margin-right: 40px;
   border-radius: 50%;
   box-shadow: 10px;
   color: black;
@@ -178,29 +181,30 @@ article i {
   height: 180px;
 }
 
-
-
-
-
-
-
-
-
-
+#biography {
+  display: flex;
+  padding: 10px;
   
-  /* Media Query and Responsive Design for Medium Size Screens up to 800px 
-  @media all and (max-width: 800px) {
-    .container {
-      /* When on medium sized screens, we center it by evenly distributing empty space around items 
-      justify-content: space-around;
-    }
+}
+
+#biography p {
+  font-style: italic;
+  align-content: center;
+}
+
+
+  /* Small screens and mobile devices with maximum width of 320px */
+  @media (max-width: 320px) {
+   
+
   }
   
-  /* Media Query and Responsive Design for Small Size Screens including mobile devices up to 500px 
-  @media all and (max-width: 500px) {
-    .container {
-      /* On small screens, we are no longer using row direction but column 
-      flex-direction: column;
-    }
+  /* Larger mobile screens with minimum screen width of 900px */
+  @media (min-width: 901px) {
+   
   }
-  */
+  
+
+  @media (min-width: 600px) and (max-width: 900px) {
+   
+  }
