@@ -47,10 +47,11 @@ body {
 .container {
   display: grid;
   width: 90vw;
-  /* height: 100vh; */
+  height: 100vh;
   margin: auto;
+  
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 250px 650px 80px;
+  grid-template-rows: 250px 78% 90px;     /* 650px */
   /* grid-gap: 5px; */
   grid-template-areas: 
   "hd hd hd hd hd hd hd hd"
@@ -83,7 +84,7 @@ body {
 .header h1 { 
   color: white; 
   font-size: 3.5em;
-  margin-top: 7%;
+  margin-top: 5%;
   
 }
 
@@ -109,6 +110,7 @@ body {
 .sidebar {
   grid-area: sd;
   display: grid;
+  border: 2px solid yellow;
   
 }
 
@@ -118,8 +120,9 @@ body {
 }
 
 .blogPostHeading { 
-  display: flex;
+  
   margin: 0px auto; 
+  border: 2px solid red;
 }
 
 .blogPostHeading h2 { 
@@ -127,7 +130,7 @@ body {
   align-items: center; }
 
 #listPost {
-  display: grid;
+  
   margin: 0px 40px;
   list-style-type: none;
  
@@ -163,16 +166,31 @@ article i {
   padding: 10px;
   align-items: center;
 }
-#blogMembership { margin: -40px 0 0 30px; }
-#blogMembership a {
+.blogMembership { 
+  
+  margin: 0px 28%;
+  padding: 15px; 
+  width: 220px;
+  height: 30px;
+  border: 2px solid red; 
+}
+.blogMembership a {
   font-size: 1.2em;
   font-weight: bold;
   text-decoration: none;
+  color: black;
 }
 
+.blogMembership a:hover { color: blue;}
+
+.avatar {
+  height: 190px;
+  border: 2px solid red;
+}
 .avatar img {
-  margin-top: -150px;
-  margin-right: 40px;
+  display: flex;
+  margin: 0 30%;
+  padding: 5px; 
   border-radius: 50%;
   box-shadow: 10px;
   color: black;
@@ -180,14 +198,14 @@ article i {
   height: 180px;
 }
 
-#biography {
-  display: flex;
-  margin-top: -50px;
-  padding: 0px 12px;
-  height: 200px;
+.biography {
+  border: 2px solid red;
+  margin-top: -380px;
+  padding: 0px 40px;
+  height: 150px;
 }
 
-#biography p {
+.biography p {
   
   font-style: italic;
   align-content: center;
@@ -210,4 +228,6 @@ article i {
 
   @media (min-width: 600px) and (max-width: 900px) {
    
+
+
   }
