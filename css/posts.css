@@ -1,64 +1,11 @@
 
-body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 16pt;
-
-}
-
-#blogPostHeading { 
-  margin: 25px 25%; 
-  width: 500; 
-  height: 80px; 
-  border: 1px solid green;
-  z-index: 3;
-}
-
-#nestedGrid {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100%;
-  border: 3px solid white;
-  grid-gap: 15px;
-}
-
-.postCard {
-  width: inherit;
-  height: inherit;
-  z-index: 3;
-  background: white;
-  
-}
-
-.postCard:hover {
-  transition: none;
-  transform: none;
-}
-
-.postCard h2, p, i {
-  margin: 0 auto;
-  padding: 5px;
-}
-
-.postCard i {
-  margin: 0 auto;
-  font-size: 0.80em;
-}
-
-.postCard p {
-  margin: 0 auto;
-  font-size: 0.90em;
-}
-
-
-
-/* Media Query and Responsive Design for Desktop Browser */
 .container {
   display: grid;
   width: 90vw;
-  /* height: 100vh; */
+  height: 100vh;
   margin: auto;
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 250px 780px 80px;
+  grid-template-rows: 250px 800px 90px;     /* 650px */
   /* grid-gap: 5px; */
   grid-template-areas: 
   "hd hd hd hd hd hd hd hd"
@@ -69,45 +16,25 @@ body {
   /* justify-content: center; */ 
 }
 
-
-.box {
-   display: flex;
-   margin-top: 20px;
-  /* align-items: center; 
-   justify-content: center; 
-   border: 1px solid red;*/
-   background: white;
-  /*  background: #F8FA9D;
-   padding: 15px; */
+#nestedGrid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  border: 3px solid white;
+  grid-gap: 15px;
 }
 
-.header {
-  grid-area: hd;
-  justify-content: center;
-  background-image: url('../images/blog-background.png');
-  background-position: stretch;
-  background-repeat: none;
-}
-
-.header h1 { 
-  color: white; 
-  font-size: 3.5em;
-  margin-top: 7%;
-  
-}
-
-.footer {
-  grid-area: ft;
-  justify-content: center; 
-  padding: 20px;
-  background-color: blue;
+.postCard,
+.postCard:hover {
+  transition: none;
+  transform: none;
   border: none;
+  font-size: 0.88em;
+  line-height: 1.6;
 }
 
-.footer a {
-  text-decoration: none;
-  color: white;
-  font-size: 0.90em;
+.postCard i {
+  font-size: 0.88em;
 }
 
 
@@ -119,18 +46,6 @@ body {
   grid-area: main;
   
 }
-
-.listPost,
-.listPost ul,
-.listPost li a {
-  display: block;
-  margin: 10% auto;
-  list-style-type: none;
-  text-decoration: none;
-  
-  
-}
-
 
 #one {
   /*display: grid;*/
@@ -163,23 +78,24 @@ body {
   background-color: darkblue;
 }
 
-article {
-  margin: 10px 35px;
-  padding: 10px;
-  width: 85%;
-  align-items: center;
-}
-
-article p {
-  margin-top: 15px;
-  font-weight: bold;
-}
-
 .comments {
   margin: 10px;
 }
 
+.listPost {
+  text-align: center;
+  list-style-type: none;
+  line-height: 1.6;
+ 
+}
+.listPost a {
+  color: black;
+}
 
+.listPost a:hover {
+  font-weight: bold;
+  color: blue;
+}
 
 
 
