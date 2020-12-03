@@ -27,6 +27,7 @@ body {
 .postCard:hover {
   transition: transform .2s;
   transform: scale(1.1);
+  background-color: rgb(107, 175, 207);
 }
 
 .postCard h3 {
