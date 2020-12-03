@@ -49,7 +49,6 @@ body {
   width: 90vw;
   height: 100vh;
   margin: auto;
-  
   grid-template-columns: 300px 300px 300px;
   grid-template-rows: 250px 78% 90px;     /* 650px */
   /* grid-gap: 5px; */
@@ -76,9 +75,11 @@ body {
 .header {
   grid-area: hd;
   justify-content: center;
-  background-image: url('../images/blog-background.png');
-  background-position: stretch;
-  background-repeat: none;
+  background: url(../images/blog-background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .header h1 { 
@@ -168,18 +169,19 @@ article i {
 }
 .blogMembership { 
   
-  margin: 0px 28%;
   padding: 15px; 
-  width: 220px;
+  
   height: 30px;
   border: 2px solid red; 
 }
 .blogMembership a {
+  margin: 0px 10%;
   font-size: 1.2em;
   font-weight: bold;
   text-decoration: none;
   color: black;
 }
+.blogMembership a span {  }
 
 .blogMembership a:hover { color: blue;}
 
