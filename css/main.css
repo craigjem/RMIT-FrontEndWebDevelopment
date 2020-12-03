@@ -30,13 +30,13 @@ body {
 }
 
 .postCard h3 {
-  margin: 10px auto;
-  padding: 5px;
+  margin: 10px;
+  
 }
 
 .postCard p {
-  padding: 5px;
-  font-size: 0.90em;
+  padding-left: 15px;
+  font-size: 1.2em;
 }
 
 .postCard i {
@@ -161,27 +161,27 @@ body {
   
 }
 
-
-article i {
-  margin: inherit;
+article {
+  margin-top: -10px;
   padding: 10px;
-  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
 }
+
 .blogMembership { 
-  
   padding: 15px; 
-  
   height: 30px;
   border: 2px solid red; 
+  text-align: center;
 }
 .blogMembership a {
-  margin: 0px 10%;
+  display: inline;
+  
   font-size: 1.2em;
   font-weight: bold;
   text-decoration: none;
   color: black;
 }
-.blogMembership a span {  }
 
 .blogMembership a:hover { color: blue;}
 
@@ -203,17 +203,20 @@ article i {
 .biography {
   border: 2px solid red;
   margin-top: -380px;
-  padding: 0px 40px;
+  padding: 0px 15px;
   height: 150px;
 }
 
 .biography p {
-  
-  font-style: italic;
-  align-content: center;
+
+  text-align: justify;
+  font-size: 1.2em;
   
   
 }
+
+#signUp { display: none;}
+
 
 
   /* Small screens and mobile devices with maximum width of 320px */

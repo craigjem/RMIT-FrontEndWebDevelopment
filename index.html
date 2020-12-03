@@ -15,7 +15,8 @@
         <img src="images/avatar.png" alt="avatar of the author of the blog">
       </div>
       <div class="blogMembership">
-        <a href="#">Login &nbsp;|&nbsp;<a href="#">Register &nbsp;</a></a>
+        <a href="#">Login</a><span><a id="regLink" onclick="registerEmail()">&nbsp;|&nbsp;Register</a></span>
+        <p id="signUp">This is email link</p>
       </div>
       <div class="biography">
         <p>My name is CJ. I'm an ICT professional with a decade of experience working within cloud and security environments. Outside of work, I enjoy hiking with friends and family.</p>
@@ -76,6 +77,15 @@
        <a href="#">Accessibility &nbsp;|&nbsp;&nbsp;<span><a href="terms-conditions.html">Terms & Conditions </a></span></a>
     </div>  
   </div>
+
+
+  <script>
+    // This JScript will action registration email link
+    function registerEmail() {
+      const emLink = document.getElementById("regLink");
+      document.getElementById("signUp").innerHTML = emLink;
+    }
+  </script>
 
   </body>
 </html>
