@@ -178,22 +178,6 @@ article i {
   font-size: 0.8em;
 }
 
-.blogMembership { 
-  /* padding: 15px; */
-  height: 100px; 
-  padding: 20px;
-  margin-top: 200px;
-  border: 2px solid blue; 
-  /* text-align: center; */
-}
-.blogMembership a {
-  display: inline;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-decoration: none;
-  color: black;
-}
-
 
 /********************************** AVATAR CSS ***********************************/
 
@@ -213,7 +197,7 @@ article i {
 
 
 .biography {
-  margin-top: 10%;
+  margin-top: 5%;
   max-width: 290px;
   
 }
@@ -223,7 +207,23 @@ article i {
   font-size: 0.9em;
 }
 
+.blogMembership { 
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 0 25px;
+}
 
+button {
+  border-radius: 25px;
+  width: 100px;
+  height: 40px;
+  font-size: 1.0em;
+}
+
+button:hover {
+  background-color: blue;
+  color: white;
+}
 
 
 
