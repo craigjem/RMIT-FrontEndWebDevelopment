@@ -18,8 +18,8 @@
         <p>My name is CJ. I'm an ICT professional with a decade of experience working within cloud and security environments. Outside of work, I enjoy hiking with friends and family.</p>
       </div>
       <div class="blogMembership"> 
-        <button>Login</button>
-        <button>Register</button>
+        <button onclick="blogLogin()">Login</button>
+        <button onclick="emailRegistration()">Register</button>
       </div>
       <h2 class="blogPostHeading" alt="Blog Posts">Blog Posts</h2>
         <div class="listPost">
@@ -76,17 +76,21 @@
    </div>    
   </div>
 
+  <script>
+    // Function to login to the site
+    function blogLogin() {
+      var emailAddress = prompt("Please enter your username:", "Login Email Address");
+      
+    }
+  </script>
 
- <!--
-    <img id="avatar-lge" src="https://source.unsplash.com/ybHtKz5He9Y/130x130" alt="Avatar picture of Blog Author" title="Avatar of Author" />
-    <article> 
-       <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." </p>
-    </article>
- 
-
-    <button class="menuButton">More!</button>
- 
-    <footer>This is the footer</footer>
--->
+  <script>
+    // Function to create an account to access the site
+    function emailRegistration() {
+      var emailAddress = prompt("Please enter your email address to signup:", "myemail@domain.com");
+      
+    }
+  </script>
+  
   </body>
 </html>

@@ -4,49 +4,86 @@
   <meta charset="utf-8">
   <title>CJ's Technical Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link href="css/terms.css" rel="stylesheet" />
+  <link href="css/posts.css" rel="stylesheet" />
 </head>
 
 <body>
   <div class="container">
     <div class="header box" alt="CJ's Technical Blog heading"><h1>CJ's Technical Blog</h1></div>
     <div class="sidebar box">
-      <h2 id="blogPostHeading" alt="Blog Posts">Blog Posts</h2>
-        <ul class="listPost">
-          <li><a href="#" title="Blog posts for January 2020">January 2020</a></li>
-          <li><a href="#">Febuary 2020</a></li>
-          <li><a href="#">March 2020</a></li>
-          <li><a href="#">April 2020</a></li>
-          <li><a href="#">May 2020</a></li>
-          <li><a href="#">June 2020</a></li>
-          <li><a href="#">July 2020</a></li>
-          <li><a href="#">August 2020</a></li>
-          <li><a href="#">September 2020</a></li>
-          <li><a href="#">October 2020</a></li>
-        </ul>
+      <div class="avatar"> 
+        <img src="images/avatar.png" alt="avatar of the author of the blog">
+      </div>
+      <div class="biography">
+        <p>My name is CJ. I'm an ICT professional with a decade of experience working within cloud and security environments. Outside of work, I enjoy hiking with friends and family.</p>
+      </div>
+      <div class="blogMembership"> 
+        <button onclick="blogLogin()">Login</button>
+        <button onclick="emailRegistration()">Register</button>
+      </div>
+      <h2 class="blogPostHeading" alt="Blog Posts">Blog Posts</h2>
+        <div class="listPost">
+          <ul>
+            <li><a href="#" title="Blog posts for January 2020">January 2020</a></li>
+            <li><a href="#">Febuary 2020</a></li>
+            <li><a href="#">March 2020</a></li>
+            <li><a href="#">April 2020</a></li>
+            <li><a href="#">May 2020</a></li>
+            <li><a href="#">June 2020</a></li>
+            <li><a href="#">July 2020</a></li>
+          </ul>
+        </div>
     </div>
     <div class="content box">
       <div id="nestedGrid">
         <div id="one" class="postCard" >
-            <h2>Website Terms & Conditions</h2>
+          <h2>Website Terms & Conditions</h2>
             <i>1st December 2020</i><br><br>
             <h3>AGREEMENT TO TERMS</h3>
-            <p>These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and [business entity name] (“we,” “us” or “our”), concerning your access to and use of the [website name.com] website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”). </p><br>
-            <p>You agree that by accessing the Site, you have read, understood, and agree to be bound by all of these Terms and Conditions. If you do not agree with all of these Terms and Conditions, then you are expressly prohibited from using the Site and you must discontinue use immediately.</p><br>
-            <p>Supplemental terms and conditions or documents that may be posted on the Site from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these Terms and Conditions at any time and for any reason. </p><br>
+            <p>These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and [business entity name] (“we,” “us” or “our”), concerning your access to and use of the [website name.com] website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”). </p>
+            <p>You agree that by accessing the Site, you have read, understood, and agree to be bound by all of these Terms and Conditions. If you do not agree with all of these Terms and Conditions, then you are expressly prohibited from using the Site and you must discontinue use immediately.</p>
+            <p>Supplemental terms and conditions or documents that may be posted on the Site from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these Terms and Conditions at any time and for any reason. </p>
             <p>We will alert you about any changes by updating the “Last updated” date of these Terms and Conditions, and you waive any right to receive specific notice of each such change. </p><br>
-            <p>borrowed from - <a href="https://termly.io/resources/templates/terms-and-conditions-template/#website-terms-and-conditions-template-sample-text-and-free-download">borrowed terms and conditions</a></p><br>
-        
+            <p>borrowed from - <a href="https://termly.io/resources/templates/terms-and-conditions-template/#website-terms-and-conditions-template-sample-text-and-free-download">borrowed terms and conditions</a></p>
         </div>
-        
+        </div>
+     
       </div>
     </div>    
     <div class="footer box">
-       <a href="index.html">Home &nbsp;|&nbsp;&nbsp;<span><a href="#">Links &nbsp;|&nbsp;&nbsp;</a><a href=""></a></span></a>
-       <a href="#">Accessibility &nbsp;|&nbsp;&nbsp;<span><a href="terms-conditions.html">Terms & Conditions </a></span></a>
-    </div>  
+      <a href="index.html">Home &nbsp;|&nbsp;&nbsp;<span><a href="#">Twitter &nbsp;|&nbsp;&nbsp;</a><a href="#">Facebook &nbsp;|&nbsp;&nbsp;</a><a href="#">Linkedin &nbsp;|&nbsp;&nbsp;</a></span></a>
+      <a href="#">Accessibility &nbsp;|&nbsp;&nbsp;<span><a href="terms-conditions.html">Terms & Conditions </a></span></a>
+   </div>    
   </div>
 
+  <script>
+    // Function to login to the site
+    function blogLogin() {
+      var emailAddress = prompt("Please enter your username:", "Login Email Address");
+      
+    }
+  </script>
+
+  <script>
+    // Function to create an account to access the site
+    function emailRegistration() {
+      var emailAddress = prompt("Please enter your email address to signup:", "myemail@domain.com");
+      
+    }
+  </script>
 
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+            
+            

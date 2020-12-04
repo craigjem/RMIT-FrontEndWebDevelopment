@@ -1,4 +1,5 @@
 
+/********************************** PAGE CSS ***********************************/
 
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -6,10 +7,56 @@ body {
 
 }
 
+.container {
+  display: grid;
+  width: 90vw;
+  margin: auto;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 250px 850px 90px;     /* 650px */
+  /* grid-gap: 5px; */
+  grid-template-areas: 
+  "hd hd hd hd hd hd hd hd"
+  "main main main main main main main sd"
+  "ft ft ft ft ft ft ft ft";
+  /* border: 2px solid orange; */
+  /* This aligns items to the end line on main-axis */
+  /* justify-content: center; */ 
+}
+
+.box {
+  display: flex;
+  margin-top: 20px;
+ /* align-items: center; 
+  justify-content: center; 
+  border: 2px solid red;*/
+  background: white;
+ /*  background: #F8FA9D;
+  padding: 15px; */
+}
+
+.header {
+  grid-area: hd;
+  justify-content: center;
+  background: url(../images/blog-background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header h1 { 
+  color: white; 
+  font-size: 3.5em;
+  margin-top: 5%;
+  
+}
+
 #nestedGrid {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 50% 50%;
+  max-width: 98%;
+  max-height: 100%;
   border: 3px solid white;
   grid-gap: 10px;
 }
@@ -32,88 +79,18 @@ body {
 
 .postCard h3 {
   margin: 10px;
+  font-size: 0.90em;
   
 }
 
 .postCard p {
   padding-left: 15px;
-  font-size: 1.2em;
+  font-size: 0.88em;
 }
-
-.postCard i {
-  margin-top: -100px;
-  font-size: 0.80em;
-}
-
-.container {
-  display: grid;
-  width: 90vw;
-  height: 100vh;
-  margin: auto;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 250px 78% 90px;     /* 650px */
-  /* grid-gap: 5px; */
-  grid-template-areas: 
-  "hd hd hd hd hd hd hd hd"
-  "main main main main main main main sd"
-  "ft ft ft ft ft ft ft ft";
-  border: 2px solid yellow;
-  /* This aligns items to the end line on main-axis */
-  /* justify-content: center; */ 
-}
-
-.box {
-   display: flex;
-   margin-top: 20px;
-  /* align-items: center; 
-   justify-content: center; 
-   border: 2px solid red;*/
-   background: white;
-  /*  background: #F8FA9D;
-   padding: 15px; */
-}
-
-.header {
-  grid-area: hd;
-  justify-content: center;
-  background: url(../images/blog-background.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.header h1 { 
-  color: white; 
-  font-size: 3.5em;
-  margin-top: 5%;
-  
-}
-
-.footer {
-  grid-area: ft;
-  justify-content: center; 
-  padding: 20px;
-  background-color: blue;
-  border: none;
-}
-
-.footer a {
-  text-decoration: none;
-  color: white;
-  font-size: 0.90em;
-}
-
-.footer a:hover {
-  font-size: 1.0em;
-}
-  
 
 .sidebar {
-  grid-area: sd;
-  display: grid;
-  border: 2px solid yellow;
-  
+  display: inline-block;
+  max-width: 100%;
 }
 
 .content {
@@ -121,31 +98,34 @@ body {
   
 }
 
-.blogPostHeading { 
-  
-  margin: 0px auto; 
-  border: 2px solid red;
+.blogPostHeading {
+  margin-top: 20%;
+  width: 300px;
+  height: 40px;
+  text-align: center;
 }
 
-.blogPostHeading h2 { 
-  margin: 0px auto;
-  align-items: center; }
 
-#listPost {
+.listPost {
+  padding: 0;
   
-  margin: 0px 40px;
+}
+
+.listPost ul li { 
   list-style-type: none;
- 
+  text-align: center;
 }
 
-#listPost ul,
-#listPost li a {
-  padding: 5px;
-  align-content: center;
+.listPost ul li a {
+  color: black;
   text-decoration: none;
+  line-height: 1.6;
 }
 
-#listPost li a:hover { font-weight: bold; color:  blue; }
+.listPost ul li a:hover {
+  font-weight: bold;
+  color: blue;
+}
 
 #one,
 #two,
@@ -166,73 +146,82 @@ article {
   margin-top: -10px;
   padding: 10px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.0em;
+}
+
+
+
+/********************************** AVATAR CSS ***********************************/
+
+.avatar {
+  
+}
+.avatar img {
+  margin: 10px 22%;
+  padding: 5px; 
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+
+/********************************** BIO CSS ***********************************/
+
+
+.biography {
+  margin-top: 5%;
+  max-width: 290px;
+  
+}
+
+.biography p {
+  margin: 10px;
+  font-size: 0.9em;
 }
 
 .blogMembership { 
-  /* padding: 15px; */
-  height: 100px; 
-  padding: 20px;
-  margin-top: 200px;
-  border: 2px solid blue; 
-  /* text-align: center; */
-}
-.blogMembership a {
-  display: inline;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-decoration: none;
-  color: black;
-}
+  margin-top: 30px;
+  margin-left: 10px;
+  padding-left: 25px;
 
-/* .blogMembership a:hover { color: blue;} */
+}
 
 button {
-  
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   border-radius: 25px;
-  width: 140px;
-  height: 50px;
-  font-size: 1.2em;
+  width: 100px;
+  height: 40px;
+  font-size: 1.0em;
 }
 
 button:hover {
   background-color: blue;
   color: white;
 }
-.avatar {
-  height: 190px;
-  border: 2px solid red;
-}
-.avatar img {
-  display: flex;
-  margin: 0 30%;
-  padding: 5px; 
-  border-radius: 50%;
-  box-shadow: 10px;
-  color: black;
-  width: 180px;
-  height: 180px;
+
+
+
+/********************************** FOOTER CSS ***********************************/
+
+.footer {
+  grid-area: ft;
+  justify-content: center; 
+  padding: 20px;
+  background-color: blue;
+  border: none;
 }
 
-.biography {
-  border: 2px solid red;
-  margin-top: -380px;
-  padding: 0px 15px;
-  height: 150px;
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.90em;
 }
 
-.biography p {
-  
-  text-align: justify;
-  font-size: 1.2em;
-  
-  
+.footer a:hover {
+  font-size: 1.0em;
 }
 
-#signUp { display: none;}
+
+
 
 
 

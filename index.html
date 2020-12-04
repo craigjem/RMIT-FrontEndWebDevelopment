@@ -14,27 +14,25 @@
       <div class="avatar"> 
         <img src="images/avatar.png" alt="avatar of the author of the blog">
       </div>
-      <div class="blogMembership"> 
-        <button onclick="">Login</button>
-        <button onclick="registerEmail()">Register</button>
-        <!-- <a href="#">Login</a><span><a id="regLink" onclick="">&nbsp;|&nbsp;Register</a></span> -->
-        <!-- <p id="signUp">This is email link</p> -->
-      </div>
       <div class="biography">
         <p>My name is CJ. I'm an ICT professional with a decade of experience working within cloud and security environments. Outside of work, I enjoy hiking with friends and family.</p>
       </div>
-      <div class="blogPostHeading" alt="Blog Posts">
-        <h2>Blog Posts</h2>
-        <ul id="listPost">
-          <li><a href="#" title="Blog posts for January 2020">January 2020</a></li>
-          <li><a href="#" title="Blog posts for Febuary 2020">Febuary 2020</a></li>
-          <li><a href="#" title="Blog posts for March 2020">March 2020</a></li>
-          <li><a href="#" title="Blog posts for April 2020">April 2020</a></li>
-          <li><a href="#" title="Blog posts for May 2020">May 2020</a></li>
-          <li><a href="#" title="Blog posts for June 2020">June 2020</a></li>
-          <li><a href="#" title="Blog posts for July 2020">July 2020</a></li>
-        </ul>
+      <div class="blogMembership"> 
+        <button onclick="blogLogin()">Login</button>
+        <button onclick="emailRegistration()">Register</button>
       </div>
+      <h2 class="blogPostHeading" alt="Blog Posts">Blog Posts</h2>
+        <div class="listPost">
+          <ul>
+            <li><a href="#" title="Blog posts for January 2020">January 2020</a></li>
+            <li><a href="#">Febuary 2020</a></li>
+            <li><a href="#">March 2020</a></li>
+            <li><a href="#">April 2020</a></li>
+            <li><a href="#">May 2020</a></li>
+            <li><a href="#">June 2020</a></li>
+            <li><a href="#">July 2020</a></li>
+          </ul>
+        </div>
     </div>
     <div class="content box">
       <div id="nestedGrid">
@@ -88,12 +86,20 @@
     </div>  
   </div>
 
+  
+  <script>
+    // Function to login to the site
+    function blogLogin() {
+      var emailAddress = prompt("Please enter your username:", "Login Email Address");
+      
+    }
+  </script>
 
   <script>
-    // This JScript will action registration email link
-    function registerEmail() {
-      const emLink = document.getElementById("regLink");
-      document.getElementById("signUp").innerHTML = emLink;
+    // Function to create an account to access the site
+    function emailRegistration() {
+      var emailAddress = prompt("Please enter your email address to signup:", "myemail@domain.com");
+      
     }
   </script>
 
