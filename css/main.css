@@ -74,7 +74,7 @@ body {
 .postCard:hover {
   transition: transform .2s;
   transform: scale(1.1);
-  background-color: rgb(107, 175, 207);
+  background-color: rgb(159, 208, 231);
 }
 
 .postCard h3 {
@@ -99,16 +99,16 @@ body {
 }
 
 .blogPostHeading {
-  margin-top: 20%;
+  margin-top: 50%;
   width: 300px;
   height: 40px;
   text-align: center;
 }
 
-
 .listPost {
   padding: 0;
   width: 250px;
+    
 }
 
 .listPost ul li { 
@@ -146,16 +146,15 @@ article {
   margin-top: -10px;
   padding: 10px;
   text-align: center;
-  font-size: 1.0em;
+  
 }
+
+article i { font-size: 0.90em; }
 
 
 
 /********************************** AVATAR CSS ***********************************/
 
-.avatar {
-  
-}
 .avatar img {
   margin: 10px 22%;
   padding: 5px; 
@@ -169,7 +168,7 @@ article {
 
 
 .biography {
-  margin-top: 5%;
+  margin-top: -10px;
   max-width: 290px;
   
 }
@@ -177,14 +176,11 @@ article {
 .biography p {
   margin: 10px;
   font-size: 0.9em;
+  line-height: 1.0;
 }
 
-.blogMembership { 
-  margin-top: 30px;
-  margin-left: 10px;
-  padding-left: 25px;
-
-}
+.leftButton { margin: 25px 0 30px 0px; padding-left: 40px; padding-right: 10px; float:left; }
+.rightButton { margin: 25px 0 30px 0px; padding-right: 40px; padding-left: 10px; float: right; }
 
 button {
   border-radius: 25px;

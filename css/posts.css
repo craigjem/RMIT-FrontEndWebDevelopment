@@ -89,7 +89,7 @@ body {
 }
 
 .blogPostHeading {
-  margin-top: 30%;
+  margin-top: 50%;
   width: 300px;
   height: 40px;
   text-align: center;
@@ -130,6 +130,7 @@ body {
 }
 
 .comments em { font-weight: bold; }
+.comments a:hover { font-weight: bold; } 
 
 .listPost {
   padding: 0;
@@ -169,13 +170,11 @@ body {
 
 article {
   margin-top: -10px;
+  margin-left: 10%;
   padding: 10px;
   text-align: center;
-  font-size: 1.5em;
-}
-
-article i {
-  font-size: 0.8em;
+  width: 80%;
+  font-size: 1.4em;
 }
 
 
@@ -192,9 +191,8 @@ article i {
 
 /********************************** BIO CSS ***********************************/
 
-
 .biography {
-  margin-top: 5%;
+  margin-top: -10px;
   max-width: 290px;
   
 }
@@ -202,14 +200,11 @@ article i {
 .biography p {
   margin: 10px;
   font-size: 0.9em;
+  line-height: 1.0;
 }
 
-.blogMembership { 
-  margin-top: 30px;
-  margin-left: 10px;
-  padding-left: 25px;
-
-}
+.leftButton { margin: 25px 0 30px 0px; padding-left: 40px; padding-right: 10px; float:left; }
+.rightButton { margin: 25px 0 30px 0px; padding-right: 40px; padding-left: 10px; float: right; }
 
 button {
   border-radius: 25px;
@@ -249,19 +244,3 @@ button:hover {
 
 
   
-  /* Media Query and Responsive Design for Medium Size Screens up to 800px 
-  @media all and (max-width: 800px) {
-    .container {
-      /* When on medium sized screens, we center it by evenly distributing empty space around items 
-      justify-content: space-around;
-    }
-  }
-  
-  /* Media Query and Responsive Design for Small Size Screens including mobile devices up to 500px 
-  @media all and (max-width: 500px) {
-    .container {
-      /* On small screens, we are no longer using row direction but column 
-      flex-direction: column;
-    }
-  }
-  */
