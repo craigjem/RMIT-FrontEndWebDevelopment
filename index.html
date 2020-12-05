@@ -10,15 +10,18 @@
 <body>
   <div class="container">
     <div class="header box" alt="CJ's Technical Blog heading"><h1>CJ's Technical Blog</h1></div>
+    <div class="avatar"> 
+      <img src="images/avatar.png" alt="avatar of the author of the blog">
+      <p>My name is CJ. I'm an ICT professional with a decade of experience working within cloud and security environments. Outside of work, I enjoy hiking with friends and family.</p>
+    </div>
     <div class="sidebar box">
-      <div class="avatar"> 
-        <img src="images/avatar.png" alt="avatar of the author of the blog">
-      </div>
+      <h1>Menu</h1>
       <div class="biography">
         <p>My name is CJ. I'm an ICT professional with a decade of experience working within cloud and security environments. Outside of work, I enjoy hiking with friends and family.</p>
       </div>
         <div class="leftButton"><button onclick="blogLogin()" title="Log into Blog">Login</button></div>
         <div class="rightButton"><button onclick="emailRegistration()" title="Register email address to login">Register</button></div>
+
       <h2 class="blogPostHeading" alt="Blog Posts">Blog Posts</h2>
         <div class="listPost">
           <ul>
@@ -36,42 +39,42 @@
       <div id="nestedGrid">
         <a id="one" class="postCard" href="posts.html" >
             <h3>Public Cloud is way ahead of the ability to secure it</h3>
-            <p>January 30th 2020</p><br>
+            <p>January 30th 2020</p>
             <article>
               <i>"What we've seen across the board is most customers consumption of public cloud is way ahead of their ability to secure it......"</i>
             </article>
         </a>
         <a id="two" class="postCard" >
             <h3>Beware of this sneaky phishing technique now being used in more attacks</h3>
-            <p>January 16, 2020</p><br>
+            <p>January 16, 2020</p>
             <article>
               <i>"There's been a large rise in cyber criminals using a particular phishing technique to trick workers into unwittingly installing malware, transferring money or handing over their login credentials."</i>
             </article>
         </a>
         <div id="three" class="postCard" >
             <h3>Australians are reporting cybercrime activities once every 10 minutes</h3>
-            <p>January 12 2020</p><br>
+            <p>January 12 2020</p>
             <article>
               <i>"Human behaviour is the most significant weakness exploited in cybercrime. Successful attacks often rely on an end-user's lack of cybersecurity understanding, using methods such as mass phishing email campaigns."</i>
             </article>
         </div>
         <div id="four" class="postCard" >
             <h3>Global pandemic opening up can of security worms</h3>
-            <p>November 13 2020</p><br>
+            <p>November 13 2020</p>
             <article>
               <i>Caught by the sudden onslaught of COVID-19, most businesses lack or have inadequate security systems in place to support remote work and now have to deal with a new reality that includes a much wider attack surface and less secured user devices.</i>
             </article>
         </div>
         <div id="five" class="postCard" >
             <h3>IPStorm botnet expands from Windows to Android, Mac, and Linux</h3>
-            <p>November 25 2020</p><br>
+            <p>November 25 2020</p>
             <article>
               <i>IPStorm, a malware botnet that was first spotted last year targeting Windows systems, has evolved to infect other types of platforms, such as Android, Linux, and Mac devices.</i>
             </article>
         </div>
         <div id="six" class="postCard" >
             <h3>Cybersecurity best practices: An open letter to end users</h3>
-            <p>Decemeber 3 2020</p><br>
+            <p>Decemeber 3 2020</p>
             <article>
               <i>In an effort to make IT pros' jobs easier, Jack Wallen offers cybersecurity tips to end users--in particular, what not to do to keep company networks, equipment, and data secure.</i>
             </article>
@@ -101,6 +104,16 @@
       alert('Thank You for registering with CJs Technical Blog, please check your email for signup link!');
       
     }
+  </script>
+
+  
+  <script>
+  document.getElementsByClassName("avatar").onmouseover = function() {bioInformation()};
+    
+  function bioInformation() {
+    document.getElementsByClassName("avatar p").visibility = "visible;";
+  }
+  
   </script>
 
   </body>

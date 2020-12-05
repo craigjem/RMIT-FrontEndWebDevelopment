@@ -243,4 +243,121 @@ button:hover {
 
 
 
+
+  /* Small screens and mobile devices with maximum width of 320px */
+  @media (max-width: 320px) {
+
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 16pt;
+    
+    }
+
+    .container {
+      display: grid;
+      width: 90vw;
+      margin: auto;
+      /* 
+      grid-template-columns: 300px 300px 300px;
+      grid-template-rows: 250px 850px 90px;     650px 
+      /* grid-gap: 5px; 
+      grid-template-areas: 
+      "hd hd hd hd hd hd hd hd"
+      "main main main main main main main sd"
+      "ft ft ft ft ft ft ft ft";  */
+      border: 2px solid orange; 
+      /* This aligns items to the end line on main-axis */
+      /* justify-content: center; */ 
+    }
+
+
+
+
+
+
+
+
+  }
+  
+  /* Larger mobile screens with minimum screen width of 900px */
+  @media (min-width: 901px) {
+     
+  body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16pt;
+  
+  }
+
+  .container {
+    display: grid;
+    width: 90vw;
+    margin: auto;
+    /* 
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 250px 850px 90px;     650px 
+    /* grid-gap: 5px; 
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd"
+    "main main main main main main main sd"
+    "ft ft ft ft ft ft ft ft";  */
+    border: 2px solid red; 
+    /* This aligns items to the end line on main-axis */
+    /* justify-content: center; */ 
+  }
+
+
+
+
+
+
+
+  }
+
+
+  @media (min-width: 600px) and (max-width: 900px) {
+   
+  body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16pt;
+
+  }
+
+  .container {
+    display: grid;
+    width: 90vw;
+    margin: auto;
+    /* 
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 250px 850px 90px;     650px 
+    /* grid-gap: 5px; 
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd"
+    "main main main main main main main sd"
+    "ft ft ft ft ft ft ft ft";  */
+    border: 2px solid blue; 
+    /* This aligns items to the end line on main-axis */
+    /* justify-content: center; */ 
+  }
+
+  .header h1 { 
+    color: white; 
+    font-size: 2.5em;
+    margin-top: 5%;
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
   
