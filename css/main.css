@@ -108,7 +108,7 @@ body {
 
 .listPost {
   padding: 0;
-  
+  width: 250px;
 }
 
 .listPost ul li { 
