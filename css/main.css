@@ -52,6 +52,8 @@ body {
   
 }
 
+
+
 #nestedGrid {
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -318,6 +320,14 @@ button:hover {
      
   }
 
+  .box {
+    display: flex;
+    margin-top: 20px;
+    /* border: 2px solid red;*/
+    background: white;
+  
+  }
+
   .header {
     grid-area: hd;
     width: inherit;
@@ -401,12 +411,7 @@ button:hover {
   article,
   article i { margin-top: 5px; font-size: 0.80em; }
 
-  .blogPostHeading,
-  .listPost {
-    display: none;
-  }
   
-
 /********************************** AVATAR CSS ***********************************/
 
 .avatar {
@@ -415,57 +420,23 @@ button:hover {
   right: 9%;
 }
 
-.avatar p { visibility: hidden;}
-
 .avatar img {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  border: 1px solid green;
-}
-
-.avatar p {
-  display: block;
-  position: absolute;
-  top: -35px;
-  right: 80%;
-  color: white;
-  background-color: grey;
-  padding: 10px;
-  font-size: 0.90em;
-  width: 350px;
-  height: 120px;
-  z-index: 999;
   
 }
 
 
-
 /********************************** BIO CSS ***********************************/
 
-
-.biography {
-  display: none;  
+.blogPostHeading, 
+.listPost, 
+.biography,
+.leftButton,
+.rightButton { 
+  display: none; 
 }
-
-
-.leftButton { display: none; margin: 25px 0 30px 0px; padding-left: 40px; padding-right: 10px; float:left; border: 1px solid green;}
-.rightButton { display: none; margin: 25px 0 30px 0px; padding-right: 40px; padding-left: 10px; float: right; border: 1px solid green;}
-
-button {
-  border-radius: 25px;
-  width: 100px;
-  height: 40px;
-  font-size: 1.0em;
-}
-
-button:hover {
-  background-color: blue;
-  color: white;
-}
-
-
-
 
 
   /********************************** FOOTER CSS ***********************************/
