@@ -10,9 +10,6 @@
 <body>
   <div class="container">
     <div class="header box" alt="CJ's Technical Blog heading"><h1>CJ's Technical Blog</h1></div>
-    <div class="avatar"> 
-      <img src="images/avatar.png" alt="avatar of the author of the blog">
-    </div>
     <div class="sidebar box">
       <div class="hamburgerMenu">
         <h1>Menu</h1>
@@ -30,13 +27,14 @@
             <li><a href="#" title="Blog posts for July 2020">July 2020</a></li>
           </ul>
       </div>
-      
+      <div class="avatar"> 
+        <img src="images/avatar.png" alt="avatar of the author of the blog">
+      </div>
       <div class="biography">
         <p>My name is CJ. I'm an ICT professional with a decade of experience working within cloud and security environments. Outside of work, I enjoy hiking with friends and family.</p>
       </div>
-        <button class="leftButton" onclick="blogLogin()" title="Log into Blog">Login</button>
-        <button class="rightButton" onclick="emailRegistration()" title="Register email address to login">Register</button>
-
+        <div class="leftButton"><button onclick="blogLogin()" title="Log into Blog">Login</button></div>
+        <div class="rightButton"><button onclick="emailRegistration()" title="Register email address to login">Register</button></div>
       <h2 class="blogPostHeading" alt="Blog Posts">Blog Posts</h2>
         <div class="listPost">
           <ul>

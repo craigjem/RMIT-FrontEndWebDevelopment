@@ -282,39 +282,275 @@ button:hover {
 
   }
   
+    
   /* Larger mobile screens with minimum screen width of 900px */
   @media (min-width: 901px) {
      
-  body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16pt;
+    
+/********************************** PAGE CSS ***********************************/
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16pt;
+
+}
+
+.container {
+  display: grid;
+  width: 90vw;
+  margin: auto;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 250px 1200px 60px;     /* 650px */
+  /* grid-gap: 5px; */
+  grid-template-areas: 
+  "hd hd hd hd hd hd hd hd"
+  "main main main main main main sd sd"
+  "ft ft ft ft ft ft ft ft";
+  /* This aligns items to the end line on main-axis */
+  /* justify-content: center; */ 
+}
+
+.box {
+  display: flex;
+  margin-top: 20px;
+ /* align-items: center; 
+  justify-content: center; */ 
+  background: white;
+ /*  background: #F8FA9D;
+  padding: 15px; */
+}
+
+.header {
+  grid-area: hd;
+  justify-content: center;
+  background: url(../images/blog-background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header h1 { 
+  color: white; 
+  font-size: 3.5em;
+  margin-top: 5%;
   
-  }
+}
 
-  .container {
-    display: grid;
-    width: 90vw;
-    margin: auto;
-    /* 
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 250px 850px 90px;     650px 
-    /* grid-gap: 5px; 
-    grid-template-areas: 
-    "hd hd hd hd hd hd hd hd"
-    "main main main main main main main sd"
-    "ft ft ft ft ft ft ft ft";  */
-    border: 2px solid red; 
-    /* This aligns items to the end line on main-axis */
-    /* justify-content: center; */ 
-  }
+#nestedGrid {
+  display: inline-block;
+  max-width: 98%;
+  max-height: 100%;
+  /* grid-template-columns: 100%;
+  grid-template-rows: 100%; */
+  /* grid-gap: 15px; */
+}
+
+.hamburgerMenu { display: none; }
+
+.sidebar {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.content {
+  grid-area: main;
+  
+}
+  
+  
+    /********************************** POST CARDS CSS ***********************************/
+
+.postCard,
+.postCard:hover {
+  margin: 10px;
+  transition: none;
+  transform: none;
+  font-size: 0.88em;
+  line-height: 1.6;
+}
+
+.postCard h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.postCard i {
+  font-size: 0.88em;
+}
+
+.blogPostHeading {
+  margin-top: 50%;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+}
+
+#one {
+  margin: 0 auto;
+}
+
+.nextButton,
+.homeButton {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 30%;
+  margin-right: -28%;  
+  padding: 18px;
+  border-radius: 10px;
+  background-color: rgb(107, 175, 207);
+  border: 1px solid lightblue;
+}
+
+.nextButton a,
+.homeButton a {
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  color: azure;
+  cursor: pointer;
+}
+
+.nextButton:hover,
+.homeButton:hover {
+  background-color: darkblue;
+}
+
+.comments {
+  margin: 5px 10px 2px 10px;
+}
+
+.comments em { font-weight: bold; }
+.comments a:hover { font-weight: bold; } 
+
+.listPost {
+  padding: 0;
+  width: 250px;
+}
+
+.listPost ul li { 
+  list-style-type: none;
+  text-align: center;
+}
+
+.listPost ul li a {
+  color: black;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.listPost ul li a:hover {
+  font-weight: bold;
+  color: blue;
+}
+
+#one,
+#two,
+#three {
+  /*display: grid;*/
+  margin: 5% 5%;
+}
+#four,
+#five,
+#six
+ {
+  /*display: grid;*/
+  margin: 3% 5%;
+  
+}
+
+article {
+  margin-top: -10px;
+  margin-left: 10%;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  font-size: 1.4em;
+}
+   
+    .sidebar {
+      display: inline-block;
+      max-width: 98%;
+    }
+    
+    .content {
+      grid-area: main;
+      
+    }
+  
+    
+    
+    
+    /********************************** AVATAR CSS ***********************************/
+    
+    .avatar img {
+      margin: 10px 22%;
+      padding: 5px; 
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+    }
+    
+    
+    /********************************** BIO CSS ***********************************/
 
 
+.biography {
+  margin-top: -10px;
+  max-width: 290px;
+  
+}
 
+.biography p {
+  margin: 10px;
+  font-size: 0.9em;
+  line-height: 1.0;
+}
 
+.leftButton { margin: 25px 0 30px 0px; padding-left: 30px; padding-right: 15px; float:left; }
+.rightButton { margin: 25px 0 30px 0px; padding-right: 30px; padding-left: 15px; float: right; }
 
+button {
+  border-radius: 25px;
+  width: 100px;
+  height: 40px;
+  font-size: 1.0em;
+}
 
+button:hover {
+  background-color: blue;
+  color: white;
+}
 
-  }
+    
+    
+    /********************************** FOOTER CSS ***********************************/
+    
+    .footer {
+      grid-area: ft;
+      width: 97.5%;
+      justify-content: center; 
+      padding: 20px;
+      background-color: blue;
+      border: none;
+    }
+    
+    .footer a {
+      text-decoration: none;
+      color: white;
+      font-size: 0.90em;
+    }
+    
+    .footer a:hover {
+      font-size: 1.0em;
+    }
+    
+    
+    
+    
+    
+    
+      }
 
 
   @media (min-width: 600px) and (max-width: 900px) {
