@@ -316,7 +316,7 @@ button:hover {
     "sd sd sd sd sd sd sd sd"
     "main main main main main main main main"
     "ft ft ft ft ft ft ft ft";  
-    border: 2px solid blue; 
+    /* border: 2px solid blue; */
      
   }
 
@@ -351,7 +351,7 @@ button:hover {
     margin-top: 0px;
     max-width: 100%;
     background-color: blue;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     
     
   }
@@ -383,14 +383,14 @@ button:hover {
     max-height: inherit;
     grid-template-columns: 33% 33% 33%; 
     grid-template-rows: 50% 50%; 
-    border: 3px solid pink;
+    /* border: 3px solid pink; */
     grid-gap: 1px;
   }
   
   .postCard {
     max-width: 100%; /* 390px; */
     height: 85%; /* 250px; */
-    border: 2px solid black;
+    /* border: 2px solid black; */
     cursor: pointer;
     text-decoration: none;
     color: black;
