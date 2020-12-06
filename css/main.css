@@ -64,7 +64,7 @@ body {
   grid-gap: 10px;
 }
 
-#hamburgerMenu { display: none; }
+.hamburgerMenu { visibility: hidden; }
 
 .postCard {
   width: 92%; /* 390px; */
@@ -365,7 +365,7 @@ button:hover {
   }
 
   .sidebar:hover {
-    height: 800px;
+    height: 600px;
     background-color: blue;
     color: white;
     border: 1px solid white;
@@ -436,6 +436,25 @@ button:hover {
 .leftButton,
 .rightButton { 
   display: none; 
+}
+
+.hamburgerMenu,
+.hamburgerMenu p,
+.hamburgerMenu a,
+.hamburgerMenu ul li { 
+   color: white;
+   text-decoration: none;
+   list-style-type: none;
+   text-align: center;
+   visibility: visible;
+   margin: 10px;
+}
+
+.hamburgerMenu a:hover,
+.hamburgerMenu ul li a:hover { font-size: 1.1em; }
+
+.hamburgerMenu h1 {
+   margin-top: 0px auto;
 }
 
 
