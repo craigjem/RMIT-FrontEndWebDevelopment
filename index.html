@@ -12,7 +12,7 @@
     <div class="header box" alt="CJ's Technical Blog heading"><h1>CJ's Technical Blog</h1></div>
     <div class="sidebar box">
       <div class="hamburgerMenu">
-        <img src="images/hamburger-icon.png">
+        <img>
         <p>My name is CJ. I'm an ICT professional with a decade of experience working within cloud and security environments. Outside of work, I enjoy hiking with friends and family.</p>
         <p><a onclick="blogLogin()" title="Log into Blog">Login</a></p>
         <p><a onclick="emailRegistration()" title="Register email address to login">Register</a></p><br>
@@ -28,7 +28,7 @@
           </ul>
       </div>
       <div class="avatar"> 
-        <img src="images/avatar.png" alt="avatar of the author of the blog">
+        <img>
       </div>
       <div class="biography">
         <p>My name is CJ. I'm an ICT professional with a decade of experience working within cloud and security environments. Outside of work, I enjoy hiking with friends and family.</p>
@@ -57,7 +57,7 @@
               <i>"What we've seen across the board is most customers consumption of public cloud is way ahead of their ability to secure it......"</i>
             </article>
         </a>
-        <a id="two" class="postCard" >
+        <a id="two" class="postCard" href="posts-2.html" >
             <h3>Beware of this sneaky phishing technique now being used in more attacks</h3>
             <p>January 16, 2020</p>
             <article>
@@ -120,14 +120,5 @@
   </script>
 
   
-  <script>
-  document.getElementsByID("avatar").onmouseover = function() {bioInformation()};
-    
-  function bioInformation() {
-    document.getElementsByID("avatar p").visibility = "visible;";
-  }
-  
-  </script>
-
   </body>
 </html>

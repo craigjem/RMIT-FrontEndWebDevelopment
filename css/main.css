@@ -12,26 +12,20 @@ body {
   width: 90vw;
   margin: auto;
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 250px 850px 90px;     /* 650px */
+  grid-template-rows: 250px 850px 90px;    
   /* grid-gap: 5px; */
   grid-template-areas: 
   "hd hd hd hd hd hd hd hd"
   "main main main main main main main sd"
   "ft ft ft ft ft ft ft ft";
   /* border: 2px solid orange; */
-  /* This aligns items to the end line on main-axis */
-  /* justify-content: center; */ 
 }
 
 .box {
   display: flex;
   margin-top: 20px;
- /* align-items: center; 
-  justify-content: center; 
-  border: 2px solid red;*/
+  /* border: 2px solid red;*/
   background: white;
- /*  background: #F8FA9D;
-  padding: 15px; */
 }
 
 .header {
@@ -133,14 +127,12 @@ body {
 #one,
 #two,
 #three {
-  /*display: grid;*/
   margin: 5% 5%;
 }
 #four,
 #five,
 #six
  {
-  /*display: grid;*/
   margin: 3% 5%;
   
 }
@@ -157,14 +149,20 @@ article i { font-size: 0.90em; }
 
 
 /********************************** AVATAR CSS ***********************************/
+.avatar {
+  margin: 10px 22%;
+  
+ }
 
 .avatar img {
-  margin: 10px 22%;
-  padding: 5px; 
+  background: url(../images/avatar.png) no-repeat center;
+  background-size: 150px 150px; 
   border-radius: 50%;
   width: 150px;
-  height: 150px;
+  height: 150px; 
+  
 }
+
 
 
 /********************************** BIO CSS ***********************************/
@@ -280,8 +278,7 @@ button:hover {
         max-width: 100%;
         background-color: blue;
         /* border: 1px solid blue; */
-        
-        
+       
       }
     
       .sidebar h1  {
@@ -348,17 +345,19 @@ button:hover {
     .avatar {
       position: absolute;
       top: 12%;
-      right: 9%;
+      right: -16%;
     }
     
     .avatar img {
+      background: url(../images/avatar.png) no-repeat center;
+      background-size: 60px 60px; 
       border-radius: 50%;
       width: 60px;
       height: 60px;
       
     }
     
-    
+       
     /********************************** BIO CSS ***********************************/
     
     .blogPostHeading, 
@@ -384,7 +383,13 @@ button:hover {
     
     .hamburgerMenu ul li a { margin-left: -30px; }
     
-    .hamburgerMenu img { width: 55px; height: 35px; }
+    .hamburgerMenu img { 
+      background: url(../images/hamburger-icon.png) no-repeat center;
+      background-size: 55px 35px; 
+      width: 55px; 
+      height: 35px; 
+      
+    }
     .hamburgerMenu a:hover,
     .hamburgerMenu ul li a:hover { cursor: pointer; font-weight: bold; font-size: 1.1em; }
     
@@ -582,13 +587,19 @@ article i { font-size: 0.90em; }
 
 /********************************** AVATAR CSS ***********************************/
 
-.avatar img {
+.avatar {
   margin: 10px 22%;
-  padding: 5px; 
+ }
+
+.avatar img {
+  background: url(../images/avatar.png) no-repeat center;
+  background-size: 150px 150px; 
   border-radius: 50%;
   width: 150px;
   height: 150px;
+  
 }
+
 
 
 /********************************** BIO CSS ***********************************/
@@ -771,28 +782,32 @@ button:hover {
   
 /********************************** AVATAR CSS ***********************************/
 
-.avatar {
-  position: absolute;
-  top: 9%;
-  right: 9%;
-}
+  .avatar {
+    position: absolute;
+    top: 10%;
+    right: -16%;
+  }
 
-.avatar img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  .avatar img {
+    background: url(../images/avatar.png) no-repeat center;
+    background-size: 100px 100px; 
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
   
-}
+  }
 
+
+  
 
 /********************************** BIO CSS ***********************************/
 
-.blogPostHeading, 
-.listPost, 
-.biography,
-.leftButton,
-.rightButton { 
-  display: none; 
+  .blogPostHeading, 
+  .listPost, 
+  .biography,
+  .leftButton,
+  .rightButton { 
+    display: none; 
 }
 
 .hamburgerMenu,
@@ -809,7 +824,12 @@ button:hover {
 
 .hamburgerMenu ul li a { margin-left: -30px; }
 
-.hamburgerMenu img { width: 55px; height: 35px; }
+.hamburgerMenu img { 
+   background: url(../images/hamburger-icon.png) no-repeat center;
+   background-size: 55px 35px; 
+   width: 55px; 
+   height: 35px; 
+  }
 .hamburgerMenu a:hover,
 .hamburgerMenu ul li a:hover { cursor: pointer; font-weight: bold; font-size: 1.1em; }
 
@@ -847,200 +867,8 @@ button:hover {
 
 
 
-  }
-
-
-
-
-
-/*
-  @media (min-width: 600px) and (max-width: 900px) {
-   
-  body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 16pt;
-
-  }
-
-  .container {
-    display: grid;
-    width: 90vw;
-    margin: auto;
-    grid-template-columns: 100%;
-    grid-template-rows: 200px 50px 750px 90px;     
-    grid-template-areas: 
-    "hd hd hd hd hd hd hd hd"
-    "sd sd sd sd sd sd sd sd"
-    "main main main main main main main main"
-    "ft ft ft ft ft ft ft ft";  
-    /* border: 2px solid blue; */
-    /* 
-  }
-
-  .box {
-    display: flex;
-    margin-top: 20px;
-    /* border: 2px solid red;*/ /*
-    background: white;
-  
-  }
-
-  .header {
-    grid-area: hd;
-    width: inherit;
-    background: url(../images/blog-background.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-  .header h1 { 
-    color: white; 
-    font-size: 2.4em;
-    margin-top: 10%;
-  
-    
-  }
-
-  .sidebar {
-    display: flex;
-    margin-top: 0px;
-    max-width: 100%;
-    background-color: blue;
-    /* border: 1px solid blue; */
-    
-    /*
-  }
-
-  .sidebar h1  {
-    color: white;
-    font-size: 1.3em;
-    margin: 0 45%;
-    padding: 5px;
-     
-  }
-
-  .sidebar:hover {
-    height: 600px;
-    background-color: blue;
-    color: white;
-    border: 1px solid white;
-    z-index: 9;
-  }
-
-  
-
-  /********************************** BLOG CARD CSS ***********************************/
-/*
-  #nestedGrid {
-    display: grid;
-    margin-top: -20px;
-    max-width: 100%;
-    max-height: inherit;
-    grid-template-columns: 33% 33% 33%; 
-    grid-template-rows: 50% 50%; 
-    /* border: 3px solid pink; */ /*
-    grid-gap: 1px;
-  }
-  
-  .postCard {
-    max-width: 100%; /* 390px; */  /*
-    height: 85%; /* 250px; */
-    /* border: 2px solid black; */  /*
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-    
-  }
-
-  .postCard h3 {
-    margin: 10px;
-    font-size: 0.80em;
-  
-  }
-
-  .postCard p {
-    padding-left: 15px;
-    font-size: 0.60em;
-  }
-
-  article,
-  article i { margin-top: 5px; font-size: 0.80em; }
-
-  
-/********************************** AVATAR CSS ***********************************/
-/*
-.avatar {
-  position: absolute;
-  top: 9%;
-  right: 9%;
-}
-
-.avatar img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  
 }
 
 
-/********************************** BIO CSS ***********************************/
-/*
-.blogPostHeading, 
-.listPost, 
-.biography,
-.leftButton,
-.rightButton { 
-  display: none; 
-}
-
-.hamburgerMenu,
-.hamburgerMenu p,
-.hamburgerMenu a,
-.hamburgerMenu ul li { 
-   color: white;
-   text-decoration: none;
-   list-style-type: none;
-   text-align: center;
-   visibility: visible;
-   margin: 10px;
-}
-
-.hamburgerMenu a:hover,
-.hamburgerMenu ul li a:hover { font-size: 1.1em; }
-
-.hamburgerMenu h1 {
-   margin-top: 0px auto;
-}
 
 
-  /********************************** FOOTER CSS ***********************************/
-/*
-  .footer {
-    grid-area: ft;
-    width: 95.5%;
-    justify-content: center; 
-    padding: 20px;
-    background-color: blue;
-    border: none;
-  }
-  
-  .footer a {
-    text-decoration: none;
-    color: white;
-    font-size: 0.70em;
-  }
-  
-  .footer a:hover {
-    font-size: 0.80em;
-  }
-
-
-
-
-
-
-
-  }
-  */

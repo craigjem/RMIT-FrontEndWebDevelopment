@@ -13,23 +13,17 @@ body {
   margin: auto;
   grid-template-columns: 300px 300px 300px;
   grid-template-rows: 250px 1200px 60px;     /* 650px */
-  /* grid-gap: 5px; */
   grid-template-areas: 
   "hd hd hd hd hd hd hd hd"
   "main main main main main main sd sd"
   "ft ft ft ft ft ft ft ft";
-  /* This aligns items to the end line on main-axis */
-  /* justify-content: center; */ 
+ 
 }
 
 .box {
   display: flex;
   margin-top: 20px;
- /* align-items: center; 
-  justify-content: center; */ 
   background: white;
- /*  background: #F8FA9D;
-  padding: 15px; */
 }
 
 .header {
@@ -53,12 +47,7 @@ body {
   display: inline-block;
   max-width: 98%;
   max-height: 100%;
-  /* grid-template-columns: 100%;
-  grid-template-rows: 100%; */
-  /* grid-gap: 15px; */
 }
-
-/* .hamburgerMenu { display: none; } */
 
 .sidebar {
   display: inline-block;
@@ -102,6 +91,7 @@ body {
 }
 
 .nextButton,
+.backButton,
 .homeButton {
   display: inline-block;
   margin-top: 10px;
@@ -114,6 +104,7 @@ body {
 }
 
 .nextButton a,
+.backButton a,
 .homeButton a {
   text-decoration: none;
   margin-left: auto;
@@ -123,6 +114,7 @@ body {
 }
 
 .nextButton:hover,
+.backButton:hover,
 .homeButton:hover {
   background-color: darkblue;
 }
@@ -158,16 +150,13 @@ body {
 #one,
 #two,
 #three {
-  /*display: grid;*/
   margin: 5% 5%;
 }
+
 #four,
 #five,
-#six
- {
-  /*display: grid;*/
+#six {
   margin: 3% 5%;
-  
 }
 
 article {
@@ -182,9 +171,13 @@ article {
 
 /********************************** AVATAR CSS ***********************************/
 
-.avatar img {
+.avatar {
   margin: 10px 22%;
-  padding: 5px; 
+ }
+
+.avatar img {
+  background: url(../images/avatar.png) no-repeat center;
+  background-size: 150px 150px; 
   border-radius: 50%;
   width: 150px;
   height: 150px;
@@ -365,6 +358,7 @@ button:hover {
     
       
       .nextButton,
+      .backButton,
       .homeButton {
         display: block;
         margin-top: 10px;
@@ -384,17 +378,28 @@ button:hover {
     .avatar {
       position: absolute;
       top: 12%;
-      right: 9%;
+      right: -16%;
     }
     
     .avatar img {
+      background: url(../images/avatar.png) no-repeat center;
+      background-size: 60px 60px; 
       border-radius: 50%;
       width: 60px;
       height: 60px;
       
     }
     
-    
+    .comments img {
+      margin-top: 15px;
+      background: url(../images/user.png) no-repeat center;
+      background-size: 50px 50px; 
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      
+     }
+
     /********************************** BIO CSS ***********************************/
     
     .blogPostHeading, 
@@ -420,7 +425,13 @@ button:hover {
     
     .hamburgerMenu ul li a { margin-left: -30px; }
     
-    .hamburgerMenu img { width: 55px; height: 35px; }
+    .hamburgerMenu img { 
+      background: url(../images/hamburger-icon.png) no-repeat center;
+      background-size: 55px 35px; 
+      width: 55px; 
+      height: 35px; 
+      border: none;
+    }
     .hamburgerMenu a:hover,
     .hamburgerMenu ul li a:hover { cursor: pointer; font-weight: bold; font-size: 1.1em; }
     
@@ -433,16 +444,7 @@ button:hover {
     .comments i  { font-size: 0.75em; }
     .comments span { font-size: 0.65em; }
 
-     .comments img {
-       border-radius: 50%;
-       width: 50px;
-       height: 50px;
-       margin-top: 15px;
-     }
-
-
-
-
+    
 
 
       /********************************** FOOTER CSS ***********************************/
@@ -495,23 +497,17 @@ body {
   margin: auto;
   grid-template-columns: 300px 300px 300px;
   grid-template-rows: 250px 1500px 90px;     /* 650px */
-  /* grid-gap: 5px; */
   grid-template-areas: 
   "hd hd hd hd hd hd hd hd"
   "main main main main main main sd sd"
   "ft ft ft ft ft ft ft ft";
-  /* This aligns items to the end line on main-axis */
-  /* justify-content: center; */ 
+
 }
 
 .box {
   display: flex;
   margin-top: 20px;
- /* align-items: center; 
-  justify-content: center; */ 
   background: white;
- /*  background: #F8FA9D;
-  padding: 15px; */
 }
 
 .header {
@@ -535,9 +531,6 @@ body {
   display: inline-block;
   max-width: 98%;
   max-height: 100%;
-  /* grid-template-columns: 100%;
-  grid-template-rows: 100%; */
-  /* grid-gap: 15px; */
 }
 
 .hamburgerMenu { display: none; }
@@ -585,6 +578,7 @@ body {
 }
 
 .nextButton,
+.backButton,
 .homeButton {
   display: inline-block;
   margin-top: 10px;
@@ -597,6 +591,7 @@ body {
 }
 
 .nextButton a,
+.backButton a,
 .homeButton a {
   text-decoration: none;
   margin-left: auto;
@@ -606,6 +601,7 @@ body {
 }
 
 .nextButton:hover,
+.backButton:hover,
 .homeButton:hover {
   background-color: darkblue;
 }
@@ -615,20 +611,10 @@ body {
 }
 
 
-
 .comments a:hover { color: blue; }
 .comments p { font-size: 0.90em; }
 .comments i  { font-size: 0.95em; }
 .comments span { font-size: 0.75em; }
-
- .comments img {
-   border-radius: 50%;
-   width: 50px;
-   height: 50px;
-   margin-top: 15px;
- }
-
-
 
 
 .listPost {
@@ -655,14 +641,12 @@ body {
 #one,
 #two,
 #three {
-  /*display: grid;*/
   margin: 5% 5%;
 }
+
 #four,
 #five,
-#six
- {
-  /*display: grid;*/
+#six {
   margin: 3% 5%;
   
 }
@@ -691,15 +675,30 @@ article {
     
     /********************************** AVATAR CSS ***********************************/
     
-    .avatar img {
+    .avatar {
       margin: 10px 22%;
-      padding: 5px; 
+     }
+    
+    .avatar img {
+      background: url(../images/avatar.png) no-repeat center;
+      background-size: 150px 150px; 
       border-radius: 50%;
       width: 150px;
       height: 150px;
+      
     }
     
-    
+    .comments img {
+      margin-top: 15px;
+      background: url(../images/user.png) no-repeat center;
+      background-size: 50px 50px; 
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      
+     }
+
+
     /********************************** BIO CSS ***********************************/
 
 
@@ -884,30 +883,34 @@ button:hover {
   .comments p { font-size: 0.90em }
   .comments i { font-size: 0.88em; }
 
-  .comments img {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-top: 15px;
-  }
 
-  
 
 /********************************** AVATAR CSS ***********************************/
 
 .avatar {
   position: absolute;
-  top: 9%;
-  right: 9%;
+  top: 10%;
+  right: -16%;
 }
 
 .avatar img {
+  background: url(../images/avatar.png) no-repeat center;
+  background-size: 100px 100px; 
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  
+
 }
 
+.comments img {
+  margin-top: 15px;
+  background: url(../images/user.png) no-repeat center;
+  background-size: 50px 50px; 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  
+ }
 
 /********************************** BIO CSS ***********************************/
 
@@ -933,7 +936,14 @@ button:hover {
 
 .hamburgerMenu ul li a { margin-left: -30px; }
 
-.hamburgerMenu img { width: 55px; height: 35px; }
+.hamburgerMenu img { 
+  background: url(../images/hamburger-icon.png) no-repeat center;
+  background-size: 55px 35px; 
+  width: 55px; 
+  height: 35px; 
+  border: none;
+  
+}
 .hamburgerMenu a:hover,
 .hamburgerMenu ul li a:hover { cursor: pointer; font-weight: bold; font-size: 1.1em; }
 
@@ -943,6 +953,7 @@ button:hover {
 
 
 .nextButton,
+.backButton,
 .homeButton {
   display: inline-block;
   margin-top: 10px;
@@ -984,5 +995,5 @@ button:hover {
 
 
 
-  }
+}
   
