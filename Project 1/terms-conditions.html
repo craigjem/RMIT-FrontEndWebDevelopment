@@ -12,7 +12,7 @@
     <div class="header box" alt="CJ's Technical Blog heading"><h1>CJ's Technical Blog</h1></div>
     <div class="sidebar box">
       <div class="hamburgerMenu">
-        <img>
+        <img src="images/hamburger-icon.png" alt="drop down menu" title="Menu">
         <p>My name is CJ. I'm an ICT professional with a decade of experience working within cloud and security environments. Outside of work, I enjoy hiking with friends and family.</p>
         <p><a href="index.html" title="Home">Home</a></p>
         <p><a onclick="blogLogin()" title="Log into Blog">Login</a></p>
@@ -29,13 +29,16 @@
           </ul>
       </div>
       <div class="avatar"> 
-        <img>
+        <img src="images/avatar.png" alt="bloggers avatar" title="bloggers avatar">
       </div>
       <div class="biography">
         <p>My name is CJ. I'm an ICT professional with a decade of experience working within cloud and security environments. Outside of work, I enjoy hiking with friends and family.</p>
       </div>
-        <div class="leftButton"><button onclick="blogLogin()" title="Log into Blog">Login</button></div>
-        <div class="rightButton"><button onclick="emailRegistration()" title="Register email address to login">Register</button></div>
+      <div class="sidebarMenu">
+        <button onclick="window.location.href='index.html'" title="Home">Home</button>
+        <button onclick="blogLogin()" title="Log into Blog">Login</button>
+        <button onclick="emailRegistration()" title="Register email address to login">Register</button>
+      </div>
       <h2 class="blogPostHeading" alt="Blog Posts">Blog Posts</h2>
         <div class="listPost">
           <ul>
@@ -52,34 +55,14 @@
     <div class="content box">
       <div id="nestedGrid">
         <div id="one" class="postCard" >
-          <h2>Public Cloud is way ahead of the ability to secure it</h2>
-            <i>November 30th 2020</i><br><br> 
-            <p>As companies need to build applications to cater for distributed workforces, the use of public cloud is a no-brainer, but as the parade of companies failing to secure S3 buckets shows, cloud customers are failing to secure it properly.</p>
-            <article>
-              <i>"What we've seen across the board is most customers consumption of public cloud is way ahead of their ability to secure it, Barracuda senior vice president of data protection, network and application security Tim Jefferson told ZDNet."</i>
-            </article>
-            <p>As the shift to working from home at the start of the year began, the old reliance on the VPN showed itself to be a potential bottleneck to employees being able to do what they are paid for.</p>
-            <p>Another effect from needing to handle a dispersed workforce has been the collapse of what was formerly a fairly-well defined corporate network perimeter.</p>
-            <p>According to Jefferson, the new best practice is to push security controls as far out to the edge as possible, which undermines the role of traditional appliances like firewalls to be able to enforce security, and people are having to work out the best place for their controls in the new working environment.</p><br>
-            <p>Full Story -<a href="https://www.zdnet.com/article/consumption-of-public-cloud-is-way-ahead-of-the-ability-to-secure-it/?&web_view=true" target="_blank"><em>Sponsored Article</em></a></p>
-        <div class="nextButton">
-          <a href="posts-2.html">Next</a>
-        </div>
-        <div class="homeButton">
-          <a href="index.html">Home</a>
-        </div>
-        <div class="nextButton">
-          <a onclick="alert('You must be a member to leave a comment!')">Leave A Comment</a>
-        </div>
-
-        <div class="comments">
-          <h3>Comments</h3>
-          <p>1 comments |&nbsp;<a onclick="alert('Another Post Like!')" title="Click to like!">4 likes</a></p>
-            <i>This article really touches our issue today as working from home has opened up avenues for cyber criminals..</i><br>
-            <img><span><em>&nbsp;&nbsp;MoJO-Man</em><i>&nbsp;&nbsp;December 1st 2020</i></span>         
-        </div>
-
-
+          <h2>Website Terms & Conditions</h2>
+            <i>1st December 2020</i><br><br>
+            <h3>AGREEMENT TO TERMS</h3>
+            <p>These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and [business entity name] (“we,” “us” or “our”), concerning your access to and use of the [website name.com] website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”). </p>
+            <p>You agree that by accessing the Site, you have read, understood, and agree to be bound by all of these Terms and Conditions. If you do not agree with all of these Terms and Conditions, then you are expressly prohibited from using the Site and you must discontinue use immediately.</p>
+            <p>Supplemental terms and conditions or documents that may be posted on the Site from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these Terms and Conditions at any time and for any reason. </p>
+            <p>We will alert you about any changes by updating the “Last updated” date of these Terms and Conditions, and you waive any right to receive specific notice of each such change. </p><br>
+            <p>borrowed from - <a href="https://termly.io/resources/templates/terms-and-conditions-template/#website-terms-and-conditions-template-sample-text-and-free-download">borrowed terms and conditions</a></p>
         </div>
         
      
@@ -108,6 +91,19 @@
       
     }
   </script>
-  
+
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+            
+            

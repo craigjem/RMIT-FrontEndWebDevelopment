@@ -12,7 +12,7 @@
     <div class="header box" alt="CJ's Technical Blog heading"><h1>CJ's Technical Blog</h1></div>
     <div class="sidebar box">
       <div class="hamburgerMenu">
-        <img>
+        <img src="images/hamburger-icon.png" alt="drop down menu" title="Menu">
         <p>My name is CJ. I'm an ICT professional with a decade of experience working within cloud and security environments. Outside of work, I enjoy hiking with friends and family.</p>
         <p><a href="index.html" title="Home">Home</a></p>
         <p><a onclick="blogLogin()" title="Log into Blog">Login</a></p>
@@ -29,13 +29,16 @@
           </ul>
       </div>
       <div class="avatar"> 
-        <img>
+        <img src="images/avatar.png" alt="bloggers avatar" title="bloggers avatar">
       </div>
       <div class="biography">
         <p>My name is CJ. I'm an ICT professional with a decade of experience working within cloud and security environments. Outside of work, I enjoy hiking with friends and family.</p>
       </div>
-        <div class="leftButton"><button onclick="blogLogin()" title="Log into Blog">Login</button></div>
-        <div class="rightButton"><button onclick="emailRegistration()" title="Register email address to login">Register</button></div>
+      <div class="sidebarMenu">
+        <button onclick="window.location.href='index.html'" title="Home">Home</button>
+        <button onclick="blogLogin()" title="Log into Blog">Login</button>
+        <button onclick="emailRegistration()" title="Register email address to login">Register</button>
+      </div>
       <h2 class="blogPostHeading" alt="Blog Posts">Blog Posts</h2>
         <div class="listPost">
           <ul>
@@ -53,10 +56,10 @@
       <div id="nestedGrid">
         <div id="one" class="postCard" >
           <h2>Beware of this sneaky phishing technique now being used in more attacks</h2>
-            <i>January 16, 2020</i><br><br> 
+            <i><u>January 16, 2020</u></i><br><br> 
             <p>There's been a large rise in cyber criminals using a particular phishing technique to trick workers into unwittingly installing malware, transferring money or handing over their login credentials.</p>
             <article>
-              <i>"There's been a large rise in cyber criminals using a particular phishing technique to trick workers into unwittingly installing malware, transferring money or handing over their login credentials."</i>
+              <i><b>"There's been a large rise in cyber criminals using a particular phishing technique to trick workers into unwittingly installing malware, transferring money or handing over their login credentials."</b></i>
             </article>
             <p>In conversation-hijacking attacks, hackers infiltrate real business email threads by exploiting previously compromised credentials –perhaps purchased on dark web forums, stolen or accessed via brute force attacks – before inserting themselves into the conversation in the guise of one of the group.</p>
             <p>The idea is that by using a real identity and by mimicking the language that person uses, the phishing attack will be viewed as coming from a trusted colleague and is thus much more likely to be successful.</p>
@@ -77,9 +80,9 @@
 
         <div class="comments">
           <h3>Comments</h3>
-          <p>1 comments |&nbsp;<a onclick="alert('Another Post Like!')" title="Click to like!">2 likes</a></p>
+          <p><b>1 comments |&nbsp;<a onclick="alert('Another Post Like!')" title="Click to like!">2 likes</a></b></p>
             <i>This article really touches our issue today as working from home has opened up avenues for cyber criminals..</i><br>
-            <img src="images/user.png"><span><em>&nbsp;&nbsp;MoJO-Man</em><i>&nbsp;&nbsp;December 1st 2020</i></span>         
+            <img src="images/user.png" alt="user avatar" title="user avatar"><span><em>&nbsp;&nbsp;MoJO-Man</em><i>&nbsp;&nbsp;December 1st 2020</i></span>         
         </div>
 
 

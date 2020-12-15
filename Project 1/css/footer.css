@@ -1,0 +1,21 @@
+
+/********************************** FOOTER CSS ***********************************/
+
+.footer {
+    grid-area: ft;
+    width: inherit;
+    justify-content: center; 
+    padding: 20px;
+    background-color: blue;
+    border: none;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.90em;
+  }
+  
+  .footer a:hover {
+    font-size: 1.0em;
+  }
