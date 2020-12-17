@@ -35,6 +35,10 @@
 
 // build the nav
 
+const menuOption = document.createElement('');
+menuOption.textContent = "Menu";
+const mainHeading = document.querySelector('');
+mainHeading.appendChild (menuOption);
 
 // Add class 'active' to section when near top of viewport
 
