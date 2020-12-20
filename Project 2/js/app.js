@@ -17,7 +17,7 @@
  * Define Global Variables
  * 
 */
-const navigationBar = document.querySelector('#navbar__list');
+const navigationBar = document.querySelector('ul#navbar__list');
 
 //Styling Navigation tag
 navigationBar.style.cssText = 'color: white; font-size: 1.4em;';
@@ -37,6 +37,23 @@ navigationBar.style.cssText = 'color: white; font-size: 1.4em;';
 */
 
 // build the nav
+
+
+//define object for querySelectorAll('sections');
+const items = document.querySelectorAll('sections');
+
+
+//loop each section  
+for (const x of items) {
+    if ( x )
+}
+
+//add each section to the menu
+
+
+//onclick eventlistner for items clicked in the menu
+
+
 
 // select the first (main) heading of the page
 //const mainHeading = document.querySelector('#navbar__list');
