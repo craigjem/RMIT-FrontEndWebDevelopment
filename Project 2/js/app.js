@@ -18,6 +18,8 @@
  * 
 */
 const navigationBar = document.querySelector('ul#navbar__list');
+const hamMenu = document.querySelector('.navbar__menu');
+const navElement = document.querySelector('nav');
 
 //Styling Navigation tag
 navigationBar.style.cssText = 'color: white; font-size: 1.4em;';
@@ -38,17 +40,34 @@ navigationBar.style.cssText = 'color: white; font-size: 1.4em;';
 
 // build the nav
 
+// Adding id of displayMenu to hide and show menu on scroll
+// create a brand new <span> element
+let newSpan = document.createElement('id');
+// set id to displayMenu
+newSpan.setAttribute('id', 'displayMenu');
+// add the <span> element as the last child element of the main heading
+
+
+
+
+
+
+
 
 //define object for querySelectorAll('sections');
-const items = document.querySelectorAll('sections');
+//const items = document.querySelectorAll('sections');
 
 
 //loop each section  
-for (const x of items) {
-    if ( x )
-}
+//for (const x of items) {
+//    if ( x )
+//}
 
 //add each section to the menu
+
+ // Add Hamburger Menu Class to NavigationBar
+ 
+ hamMenu.classList.add("hamburgerMenu");
 
 
 //onclick eventlistner for items clicked in the menu
@@ -70,8 +89,8 @@ for (const x of items) {
 
 
 //Insert HTML element to build navigation
-const htmlTextToAdd = '<li href="#section1"> ${section1} </li>';
-navigationBar.insertAdjacentHTML ('afterbegin', htmlTextToAdd);
+//const htmlTextToAdd = '<li href="#section1"> ${section1} </li>';
+//navigationBar.insertAdjacentHTML ('afterbegin', htmlTextToAdd);
 
 
 // Grab Section 1
