@@ -43,10 +43,15 @@ navigationBar.style.cssText = 'color: white; font-size: 1.4em;';
 // Adding id of displayMenu to hide and show menu on scroll
 // create a brand new <span> element
 // let newIdDisplay = document.createElement('id');
-// set id to displayMenu
-navElement.setAttribute('id', 'displayMenu');
+
 // add the <id="displayMenu"> element to the main heading
-//navElement.insertAdjacentElement('afterbegin', newIdDisplay);
+navElement.setAttribute('id', 'displayMenu');
+
+ // Add Hamburger Menu Class to NavigationBar
+ hamMenu.classList.add("hamburgerMenu");
+
+
+
 
 
 
@@ -55,7 +60,15 @@ navElement.setAttribute('id', 'displayMenu');
 
 
 //define object for querySelectorAll('sections');
-//const items = document.querySelectorAll('sections');
+const items = document.getElementsByTagName('section');
+
+for (let i=0; i<=3; i++) {
+  console.log(items[i]);
+  let sectioName = items[i].getAttribute('data-nav');
+  console.log(sectioName);
+
+}
+
 
 
 //loop each section  
@@ -65,12 +78,38 @@ navElement.setAttribute('id', 'displayMenu');
 
 //add each section to the menu
 
- // Add Hamburger Menu Class to NavigationBar
- 
- hamMenu.classList.add("hamburgerMenu");
+
 
 
 //onclick eventlistner for items clicked in the menu
+
+//navbar__list 
+document.querySelectorAll('a').addEventListener('click', function() {
+
+    const whiteRabbit = document.getElementById("section3");
+
+    let rabbitDownKeyframes = new KeyframeEffect(
+        whiteRabbit, 
+        [
+          { transform: 'translateY(0%)' }, 
+          { transform: 'translateY(100%)' }
+        ], 
+        { duration: 3000, fill: 'forwards' }
+      );
+
+      let rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+
+// Play rabbit animation
+  rabbitDownAnimation.play();
+
+});
+
+
+
+
+
+
+
 
 
 

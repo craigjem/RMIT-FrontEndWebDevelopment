@@ -92,3 +92,47 @@ for(let i = 0; i < allHeaders.length; i++){
 // code is directed at the parent element
 mainHeading.parentElement.removeChild(mainHeading);
 
+
+const parent = document.createElement('div');
+const child = document.createElement('p');
+const appendValue = parent.append(child);
+console.log(appendValue) // undefined
+const appendChildValue = parent.appendChild(child);
+console.log(appendChildValue) // <p><p>
+
+
+var whiteRabbit = document.getElementById("rabbit");
+
+var rabbitDownKeyframes = new KeyframeEffect(
+    whiteRabbit, 
+    [
+      { transform: 'translateY(0%)' }, 
+      { transform: 'translateY(100%)' }
+    ], 
+    { duration: 3000, fill: 'forwards' }
+  );
+
+var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+
+// On tap or click,
+whiteRabbit.addEventListener("mousedown", downHeGoes, false);
+whiteRabbit.addEventListener("touchstart", downHeGoes, false);
+
+// Trigger a single-fire animation
+function downHeGoes(event) {
+
+  // Remove those event listeners
+  whiteRabbit.removeEventListener("mousedown", downHeGoes, false);
+  whiteRabbit.removeEventListener("touchstart", downHeGoes, false);  
+
+  // Play rabbit animation
+  rabbitDownAnimation.play();
+    
+}
+
+
+var element = document.querySelector('.element');
+var dataAttribute = element.getAttribute('data-name');
+// replace "data-name" with your data attribute name
+
+console.log(dataAttribute);
