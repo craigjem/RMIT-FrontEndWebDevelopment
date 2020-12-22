@@ -20,6 +20,7 @@
 const navigationBar = document.querySelector('ul#navbar__list');
 const hamMenu = document.querySelector('.navbar__menu');
 const navElement = document.querySelector('nav');
+const items = document.getElementsByTagName('section');
 
 //Styling Navigation tag
 navigationBar.style.cssText = 'color: white; font-size: 1.4em;';
@@ -51,23 +52,29 @@ navElement.setAttribute('id', 'displayMenu');
  hamMenu.classList.add("hamburgerMenu");
 
 
-
-
-
-
-
-
-
-
-//define object for querySelectorAll('sections');
-const items = document.getElementsByTagName('section');
-
+// Insert HTML element to build navigation
 for (let i=0; i<=3; i++) {
-  console.log(items[i]);
-  let sectioName = items[i].getAttribute('data-nav');
-  console.log(sectioName);
+    // Add Parent and Child elements
+    let navSelect = document.createElement('a');
+    let navlist = document.createElement('li');
+    // Get attribute of data-nav
+    let sectioName = items[i].getAttribute('data-nav');
+    // Get inner text of data-nav
+    navlist.innerText = sectioName;
+    // Output inner text of data-nav to the menu
+    navigationBar.appendChild(navSelect);
+    parent.append(navlist);
 
 }
+
+
+  
+    
+  //  navigationBar.insertAdjacentElement('afterbegin', list);
+    
+  //console.log(sectioName);
+
+
 
 
 
@@ -127,9 +134,7 @@ document.querySelectorAll('a').addEventListener('click', function() {
 //document.body.appendChild(mainHeading);
 
 
-//Insert HTML element to build navigation
-//const htmlTextToAdd = '<li href="#section1"> ${section1} </li>';
-//navigationBar.insertAdjacentHTML ('afterbegin', htmlTextToAdd);
+
 
 
 // Grab Section 1
