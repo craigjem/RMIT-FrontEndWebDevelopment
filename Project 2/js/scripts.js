@@ -64,3 +64,31 @@ const mainHeading = document.querySelector('h1');
 mainHeading.appendChild(newSpan);
 
 
+
+document.getElementsByTagName('p');
+document.getElementsByTagName('article');
+
+// selects the DOM element with an ID of "sidebar"
+const sidebarElement = document.getElementById('sidebar');
+
+// searches within the "sidebar" element for any elements with a class of "sub-heading"
+const subHeadingList = sidebarElement.getElementsByClassName('sub-heading');
+
+// find and return a list of elements with the class "header"
+document.querySelectorAll('.header');
+
+// find and return a list of <header> elements
+document.querySelectorAll('header');
+
+
+// NodeList
+const allHeaders = document.querySelectorAll('header');
+
+for(let i = 0; i < allHeaders.length; i++){
+    console.dir(allHeaders[i]);
+}
+
+
+// code is directed at the parent element
+mainHeading.parentElement.removeChild(mainHeading);
+

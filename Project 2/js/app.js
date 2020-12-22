@@ -42,11 +42,11 @@ navigationBar.style.cssText = 'color: white; font-size: 1.4em;';
 
 // Adding id of displayMenu to hide and show menu on scroll
 // create a brand new <span> element
-let newSpan = document.createElement('id');
+// let newIdDisplay = document.createElement('id');
 // set id to displayMenu
-newSpan.setAttribute('id', 'displayMenu');
-// add the <span> element as the last child element of the main heading
-
+navElement.setAttribute('id', 'displayMenu');
+// add the <id="displayMenu"> element to the main heading
+//navElement.insertAdjacentElement('afterbegin', newIdDisplay);
 
 
 
