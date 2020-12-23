@@ -56,39 +56,23 @@ navElement.setAttribute('id', 'displayMenu');
 for (let i=0; i<=3; i++) {
     // Add Parent and Child elements
     const navSelect = document.createElement('a');
-    //const addHref = document.createElement('href');
     const navlist = document.createElement('li');
 
-    
-   // let navlist = document.createElement('li');
-    // Get attribute of data-nav
+    // Get attributes of parent element
     let sectioName = items[i].getAttribute('data-nav');
     let getSectionId = items[i].getAttribute('id');
-  //  console.log(getSectionId);
-
-   // let setSectionId = items[i].setAttribute('id', '="#', getSectionId, '"');
-   // console.log(setSectionId);
+ 
+    // Add links to a tag
+    navSelect.setAttribute('href', '#' + getSectionId);
+  
     // Get inner text of data-nav
     navlist.innerText = sectioName;
-    //addHref.innerHTML = setSectionId;
-    let addHref = navSelect.append('href', '#' + getSectionId);
-    navSelect.append(addHref);
+    
     // Output inner text of data-nav to the menu
     navigationBar.appendChild(navSelect);
-    //addHref.append(navSelect);
-    navSelect.append(navlist);
-
     
-
-    //const appendValue = navSelect.append(addHref);
-    //console.log(appendValue);
-    //navSelect.appendChild(addHref);
-    //console.log(appendChildValue);
-
-   
-
-
-   // addHref.append('="#', getSectionId, '"');
+    // Append link element to parent
+    navSelect.append(navlist);
 
 }
 
