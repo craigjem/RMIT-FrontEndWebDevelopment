@@ -21,9 +21,22 @@ const navigationBar = document.querySelector('ul#navbar__list');
 const hamMenu = document.querySelector('.navbar__menu');
 const navElement = document.querySelector('nav');
 const items = document.getElementsByTagName('section');
+const homeNav = navigationBar.innerHTML = '<a id="btn-home" href="#">Home</a>';
 
 //Styling Navigation tag
 navigationBar.style.cssText = 'color: white; font-size: 1.4em;';
+
+//home button style
+let btnStyle = document.getElementById('btn-home');
+btnStyle.style.cssText = 'display: inline-block; text-decoration: none; padding: 20px 10px; margin: 0 auto; height: 4rem; text-align: right; font-size: 1.4em; color: white; font-weight: normal; cursor: pointer;';
+btnStyle.addEventListener("mouseover", function( event ) {
+  btnStyle.style.cssText = 'display: inline-block; text-decoration: none; padding: 20px 10px; margin: 0 auto; height: 4rem; text-align: right; font-size: 1.4em; color: white; font-weight: bold; cursor: pointer;';
+});
+btnStyle.addEventListener("mouseleave", function( event ) {
+  btnStyle.style.cssText = 'display: inline-block; text-decoration: none; padding: 20px 10px; margin: 0 auto; height: 4rem; text-align: right; font-size: 1.4em; color: white; font-weight: normal; cursor: pointer;';
+});
+
+   
 
 /**
  * End Global Variables
@@ -41,15 +54,18 @@ navigationBar.style.cssText = 'color: white; font-size: 1.4em;';
 
 // build the nav
 
-// Adding id of displayMenu to hide and show menu on scroll
-// create a brand new <span> element
-// let newIdDisplay = document.createElement('id');
-
 // add the <id="displayMenu"> element to the main heading
-navElement.setAttribute('id', 'displayMenu');
+ navElement.setAttribute('id', 'displayMenu');
 
  // Add Hamburger Menu Class to NavigationBar
  hamMenu.classList.add("hamburgerMenu");
+
+ 
+ 
+
+// navlist.innerText = 'Home';
+ //navSelect.setAttribute('href', '#');
+
 
 
 // Insert HTML element to build navigation
@@ -57,7 +73,6 @@ for (let i=0; i<=3; i++) {
     // Add Parent and Child elements
     const navSelect = document.createElement('a');
     const navlist = document.createElement('li');
-
     // Get attributes of parent element
     let sectioName = items[i].getAttribute('data-nav');
     let getSectionId = items[i].getAttribute('id');
@@ -77,8 +92,10 @@ for (let i=0; i<=3; i++) {
 }
 
 
-  
     
+
+
+
   //  navigationBar.insertAdjacentElement('afterbegin', list);
     
   //console.log(sectioName);

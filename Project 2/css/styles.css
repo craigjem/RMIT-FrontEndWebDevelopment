@@ -28,6 +28,25 @@ h1 {
 
 .hamburgerMenu { display: none; }  
 
+/* Navigation Styles*/
+.navbar__menu ul,
+#btn-home ul {
+    padding-left: 0;
+    margin: 0 auto;
+    height: 4rem;
+    text-align: right;
+    background-color: blue;
+    color: white;
+}
+
+.navbar__menu a li,
+#btn-home a li {
+    display: inline-block;
+    font-size: 1.4em;
+    padding: 20px 10px;
+    cursor: pointer;
+    color: white;
+}
 
 @media only screen and (min-width: 35em){
     h1 {
