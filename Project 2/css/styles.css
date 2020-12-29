@@ -10,6 +10,7 @@
 
 
 /* ---- Base Rules ---- */
+
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
@@ -25,8 +26,6 @@ h1 {
     font-size: 3em;
     margin: 2em 1rem;
 }
-
-.hamburgerMenu { display: none; }  
 
 /* Navigation Styles*/
 .navbar__menu ul,
@@ -47,6 +46,10 @@ h1 {
     cursor: pointer;
     color: white;
 }
+
+
+
+
 
 @media only screen and (min-width: 35em){
     h1 {
@@ -115,7 +118,7 @@ section {
 
 .navbar__menu a li:hover {
     font-weight: bold;
-    /* transition: ease 0.3s all; */
+    transition: ease 0.3s all;
     
 }
 
@@ -240,47 +243,6 @@ section.your-active-class .landing__container::after {
 }
 
 
-@media (max-width: 320px) {
-
-/* Hanburger Menu */
-
-.hamburgerMenu,
-.hamburgerMenu p,
-.hamburgerMenu a,
-.hamburgerMenu ul li { 
-   color: white;
-   text-decoration: none;
-   list-style-type: none;
-   text-align: center;
-   visibility: visible;
-   margin: 10px;
-   font-size: 0.90em;
-}
-
-.hamburgerMenu ul li a { margin-left: -30px; }
-
-.hamburgerMenu img { 
-  width: 55px; 
-  height: 35px; 
-  
-}
-.hamburgerMenu a:hover,
-.hamburgerMenu ul li a:hover { cursor: pointer; font-weight: bold; font-size: 1.1em; }
-
-.hamburgerMenu h1 {
-   margin-top: 0px auto;
-}
-
-
-
-
-
-}
-
-
-
-
-
 
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
@@ -295,3 +257,4 @@ section.your-active-class .landing__container::after {
 		           rotate(-360deg);
 	}
 }
+

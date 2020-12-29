@@ -22,9 +22,15 @@ const hamMenu = document.querySelector('.navbar__menu');
 const navElement = document.querySelector('nav');
 const items = document.getElementsByTagName('section');
 const homeNav = navigationBar.innerHTML = '<a id="btn-home" href="#">Home</a>';
+const smoothScroll = document.querySelector('html');
+const activeState = document.querySelector('.your-active-class h2');
+
 
 //Styling Navigation tag
-navigationBar.style.cssText = 'color: white; font-size: 1.4em;';
+navigationBar.style.cssText = 'display: block; color: white; font-size: 1.2em;';
+smoothScroll.style.cssText = 'scroll-behavior: smooth;';
+activeState.style.cssText = 'color: red;';
+
 
 //home button style
 let btnStyle = document.getElementById('btn-home');
@@ -40,14 +46,14 @@ btnStyle.addEventListener("mouseleave", function( event ) {
 
 /**
  * End Global Variables
- * Start Helper Functions
+ * 
  * 
 */
 
 
 
 /**
- * End Helper Functions
+ * 
  * Begin Main Functions
  * 
 */
@@ -56,29 +62,22 @@ btnStyle.addEventListener("mouseleave", function( event ) {
 
 // add the <id="displayMenu"> element to the main heading
  navElement.setAttribute('id', 'displayMenu');
-
- // Add Hamburger Menu Class to NavigationBar
- hamMenu.classList.add("hamburgerMenu");
-
  
  
-
-// navlist.innerText = 'Home';
- //navSelect.setAttribute('href', '#');
-
-
-
+ 
 // Insert HTML element to build navigation
 for (let i=0; i<=3; i++) {
     // Add Parent and Child elements
     const navSelect = document.createElement('a');
     const navlist = document.createElement('li');
+    
     // Get attributes of parent element
     let sectioName = items[i].getAttribute('data-nav');
     let getSectionId = items[i].getAttribute('id');
  
     // Add links to a tag
     navSelect.setAttribute('href', '#' + getSectionId);
+    navSelect.classList.add("btn__Selector");
   
     // Get inner text of data-nav
     navlist.innerText = sectioName;
@@ -91,114 +90,50 @@ for (let i=0; i<=3; i++) {
 
 }
 
+// Change Active State on element id click
 
-    
+let navList = document.getElementsByClassName("btn__Selector");
+
+for (var i = 0; i < navList.length; i++) {
+  navList[i].addEventListener("click", function() {
+  
+  // Removes your-active-class from section
+  let activeClass = document.querySelector(".your-active-class");
+  activeClass.classList.remove("your-active-class");
+  // Changes style of section header to white
+  document.querySelector(".landing__container h2").style.cssText = 'color: white';
+  // Add your-active-class to section
+  let sectionTag = document.querySelector('section');
+  sectionTag.classList.add("your-active-class");
+
+  });
+}
 
 
-
-  //  navigationBar.insertAdjacentElement('afterbegin', list);
-    
-  //console.log(sectioName);
-
-
-
-
-
-//loop each section  
-//for (const x of items) {
-//    if ( x )
+  // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar 
+let prevScroll = window.pageYOffset;
+window.onscroll = function() {
+  let currentScroll = window.pageYOffset;
+  // Test condition of scroll position with if else statement
+  if (prevScroll >= currentScroll) {
+      // Display Menu on Scrolling Down
+        document.getElementById('displayMenu').style.display='block';
+  } else {
+      // Hide Menu on Scrolling Up
+        document.getElementById('displayMenu').style.display='none';    
+  }
+  prevScroll = currentScroll;
+}
+  
+// Show scrollButton when scrolled a certain length of the page
+//let scrollPosition = window.pageYOffset;
+//if (scrollPosition <= 800 ) {
+//   document.getElementById('btn-scroll').style.display='block';
+//}   
+//else {
+ //  document.getElementById('btn-scroll').style.display='none';
 //}
 
-//add each section to the menu
-
-
-
-
-//onclick eventlistner for items clicked in the menu
-
-//navbar__list 
-document.querySelectorAll('a').addEventListener('click', function() {
-
-    const whiteRabbit = document.getElementById("section3");
-
-    let rabbitDownKeyframes = new KeyframeEffect(
-        whiteRabbit, 
-        [
-          { transform: 'translateY(0%)' }, 
-          { transform: 'translateY(100%)' }
-        ], 
-        { duration: 3000, fill: 'forwards' }
-      );
-
-      let rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
-
-// Play rabbit animation
-  rabbitDownAnimation.play();
-
-});
-
-
-
-
-
-
-
-
-
-
-// select the first (main) heading of the page
-//const mainHeading = document.querySelector('#navbar__list');
-
-// create a brand new <span> element
-//const newSpan = document.createElement('li');
-
-// add text to the element
-//newSpan.textContent = 'Section 1';
-
-// add the <span> element as the last child element of the main heading
-//mainHeading.appendChild(newSpan);
-//document.body.appendChild(mainHeading);
-
-
-
-
-
-// Grab Section 1
-//let firstSection = document.getElementById('section1');
-// Get Section 1 h2 heading
-//let firstSectionHeading = document.querySelector('h2').innerHTML;
-
-// Create li element
-//let menuOptionOne = document.createElement('li');
-// link element to li
-//menuOptionOne.textContent = firstSectionHeading;
-
-// Set Nav Ul - Li to section 1 heading
-//document.getElementById('navbar__list');
-//const navHeading = document.querySelector('ul');
-//navHeading.appendChild(menuOptionOne);
-
-
-//menuOption.textContent = "Menu";
-//const mainHeading = document.querySelector('ul');
-//mainHeading.appendChild (menuOption);
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
+ 
+ 
 
