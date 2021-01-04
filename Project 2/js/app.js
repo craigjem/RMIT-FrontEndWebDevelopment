@@ -77,8 +77,8 @@ for (let i=0; i<=3; i++) {
  
     // Add links to a tag
     navSelect.setAttribute('href', '#' + getSectionId);
-    navSelect.classList.add("btn__Selector");
-  
+    navSelect.classList.add("btn");
+       
     // Get inner text of data-nav
     navlist.innerText = sectioName;
     
@@ -92,22 +92,55 @@ for (let i=0; i<=3; i++) {
 
 // Change Active State on element id click
 
-let navList = document.getElementsByClassName("btn__Selector");
+let navList = document.getElementsByClassName("btn");
 
 for (var i = 0; i < navList.length; i++) {
   navList[i].addEventListener("click", function() {
   
-  // Removes your-active-class from section
-  let activeClass = document.querySelector(".your-active-class");
-  activeClass.classList.remove("your-active-class");
-  // Changes style of section header to white
-  document.querySelector(".landing__container h2").style.cssText = 'color: white';
-  // Add your-active-class to section
-  let sectionTag = document.querySelector('section');
-  sectionTag.classList.add("your-active-class");
+// Highlight current section in the navigation bar
+$(window).on("scroll", function() {
+  var currentPos = $(window).scrollTop();
+
+  $('#navbar__list li a').each(function() {
+    var sectionLink = $(this);
+    // capture the height of the navbar
+    var navHeight = $('.navbar__menu').outerHeight() + 1;
+    var section = $(sectionLink.attr('href'));
+
+    // subtract the navbar height from the top of the section
+    if(section.position().top - navHeight  <= currentPos && sectionLink.offset().top + section.height()> currentPos) {
+      $('#navbar__list li').removeClass('your-active-class');
+      sectionLink.parent().addClass('your-active-class');
+      $(".your-active-class").style.cssText = 'color: red';
+    } else {
+      sectionLink.parent().removeClass('your-active-class');
+      $("btn").style.cssText = 'color: white';
+    }
+  });        
+});  
 
   });
 }
+
+
+
+
+
+  // Removes your-active-class from section
+ // let activeClass = document.querySelector(".your-active-class");
+ // activeClass.classList.remove("your-active-class");
+  // Changes style of section header to white
+//  document.querySelector(".landing__container h2").style.cssText = 'color: white';
+  // Add your-active-class to section
+//  let sectionTag = document.querySelector('section');
+//  sectionTag.classList.add("your-active-class");
+
+
+
+
+
+
+
 
 
   // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar 
@@ -125,14 +158,7 @@ window.onscroll = function() {
   prevScroll = currentScroll;
 }
   
-// Show scrollButton when scrolled a certain length of the page
-//let scrollPosition = window.pageYOffset;
-//if (scrollPosition <= 800 ) {
-//   document.getElementById('btn-scroll').style.display='block';
-//}   
-//else {
- //  document.getElementById('btn-scroll').style.display='none';
-//}
+
 
  
  
