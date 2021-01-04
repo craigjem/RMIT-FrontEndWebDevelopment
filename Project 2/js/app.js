@@ -22,13 +22,13 @@ const hamMenu = document.querySelector('.navbar__menu');
 const navElement = document.querySelector('nav');
 const items = document.getElementsByTagName('section');
 const homeNav = navigationBar.innerHTML = '<a id="btn-home" href="#">Home</a>';
-const smoothScroll = document.querySelector('html');
+//const navScroll = document.querySelector('#navbar__list ul li');
 const activeState = document.querySelector('.your-active-class h2');
 
 
 //Styling Navigation tag
 navigationBar.style.cssText = 'display: block; color: white; font-size: 1.2em;';
-smoothScroll.style.cssText = 'scroll-behavior: smooth;';
+//smoothScroll.style.cssText = 'scroll-behavior: smooth;';
 activeState.style.cssText = 'color: red;';
 
 
@@ -90,37 +90,63 @@ for (let i=0; i<=3; i++) {
 
 }
 
+
 // Change Active State on element id click
 
 let navList = document.getElementsByClassName("btn");
 
 for (var i = 0; i < navList.length; i++) {
-  navList[i].addEventListener("click", function() {
-  
-// Highlight current section in the navigation bar
-$(window).on("scroll", function() {
-  var currentPos = $(window).scrollTop();
-
-  $('#navbar__list li a').each(function() {
-    var sectionLink = $(this);
-    // capture the height of the navbar
-    var navHeight = $('.navbar__menu').outerHeight() + 1;
-    var section = $(sectionLink.attr('href'));
-
-    // subtract the navbar height from the top of the section
-    if(section.position().top - navHeight  <= currentPos && sectionLink.offset().top + section.height()> currentPos) {
-      $('#navbar__list li').removeClass('your-active-class');
-      sectionLink.parent().addClass('your-active-class');
-      $(".your-active-class").style.cssText = 'color: red';
-    } else {
-      sectionLink.parent().removeClass('your-active-class');
-      $("btn").style.cssText = 'color: white';
-    }
-  });        
-});  
-
+  navList[i].addEventListener("click", function(e) {
+    
+    // Set active class variables
+    
+    let active__class = document.querySelector(".your-active-class");
+    let reset__active__class = document.querySelector(".your-active-class h2");
+    // reset current active class style
+    reset__active__class.style.cssText = 'color: white;';
+    // remove current active class state
+    active__class.classList.remove("your-active-class");
+    //prevent the default action of a click, allow to change the behaviour,In this case it will allow to scroll
+    e.preventDefault(); 
+    // scroll into view clicked link
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: 'smooth' })
+    // Add active class to clicked link
+    document.querySelector(this.getAttribute("href")).classList.add('your-active-class');
+    // Change h2 to red to indicate current section link
+    document.querySelector('.your-active-class h2').style.cssText = 'color: red';
   });
 }
+// Highlight current section in the navigation bar
+//$(window).on("scroll", function() {
+//  var currentPos = $(window).scrollTop();
+
+//  $('#navbar__list li a').each(function() {
+//    var sectionLink = $(this);
+    // capture the height of the navbar
+//    var navHeight = $('.navbar__menu').outerHeight() + 1;
+//    var section = $(sectionLink.attr('href'));
+
+    // subtract the navbar height from the top of the section
+ //   if(section.position().top - navHeight  <= currentPos && sectionLink.offset().top + section.height()> currentPos) {
+  //    $('#navbar__list li').removeClass('your-active-class');
+ //     sectionLink.parent().addClass('your-active-class');
+ //     $(".your-active-class h2").style.cssText = 'color: red';
+ //   } else {
+ //     sectionLink.parent().removeClass('your-active-class');
+ //     $("btn").style.cssText = 'color: white';
+ //   }
+ // });        
+//});  
+
+  
+
+
+
+
+
+
+
 
 
 
@@ -160,6 +186,4 @@ window.onscroll = function() {
   
 
 
- 
- 
 
