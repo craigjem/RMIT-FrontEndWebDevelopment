@@ -99,7 +99,6 @@ for (var i = 0; i < navList.length; i++) {
   navList[i].addEventListener("click", function(e) {
     
     // Set active class variables
-    
     let active__class = document.querySelector(".your-active-class");
     let reset__active__class = document.querySelector(".your-active-class h2");
     // reset current active class style
@@ -117,55 +116,33 @@ for (var i = 0; i < navList.length; i++) {
     document.querySelector('.your-active-class h2').style.cssText = 'color: red';
   });
 }
+
+
+
 // Highlight current section in the navigation bar
-//$(window).on("scroll", function() {
-//  var currentPos = $(window).scrollTop();
+$(window).on("scroll", function() {
+  let currentPos = $(window).scrollTop();
 
-//  $('#navbar__list li a').each(function() {
-//    var sectionLink = $(this);
-    // capture the height of the navbar
-//    var navHeight = $('.navbar__menu').outerHeight() + 1;
-//    var section = $(sectionLink.attr('href'));
+$('#navbar__list li a').each(function() {
+  let sectionLink = $(this);
 
-    // subtract the navbar height from the top of the section
- //   if(section.position().top - navHeight  <= currentPos && sectionLink.offset().top + section.height()> currentPos) {
-  //    $('#navbar__list li').removeClass('your-active-class');
- //     sectionLink.parent().addClass('your-active-class');
- //     $(".your-active-class h2").style.cssText = 'color: red';
- //   } else {
- //     sectionLink.parent().removeClass('your-active-class');
- //     $("btn").style.cssText = 'color: white';
- //   }
- // });        
-//});  
+// capture the height of the navbar
+  let navHeight = $('.navbar__menu').outerHeight() + 1;
+  let section = $(sectionLink.attr('href'));
 
+// subtract the navbar height from the top of the section
+if(section.position().top - navHeight  <= currentPos && sectionLink.offset().top + section.height()> currentPos) {
   
-
-
-
-
-
-
-
-
-
-
-
-
-  // Removes your-active-class from section
- // let activeClass = document.querySelector(".your-active-class");
- // activeClass.classList.remove("your-active-class");
-  // Changes style of section header to white
-//  document.querySelector(".landing__container h2").style.cssText = 'color: white';
-  // Add your-active-class to section
-//  let sectionTag = document.querySelector('section');
-//  sectionTag.classList.add("your-active-class");
-
-
-
-
-
-
+  $('#navbar__list li').removeClass('your-active-class');
+  sectionLink.parent().addClass('your-active-class');
+  $(".your-active-class h2").style.cssText = 'color: red';
+  } else {
+  sectionLink.parent().removeClass('your-active-class');
+  $("btn").style.cssText = 'color: white';
+  }
+ });        
+});  
+  
 
 
 
