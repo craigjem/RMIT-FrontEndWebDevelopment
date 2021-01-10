@@ -1,13 +1,18 @@
 # Landing Page Project
 
+CJ Technical Blog
+
 ## Table of Contents
 
 * [Instructions](#instructions)
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+CJ Technical Blog is a dynamically built website realying on the app.js javascript file which dynamically builds the navigation menu system of the site, allowing scrolling and highlighting of the menu system and content headings so the end users can understand and successfully navigate the web site application.
 
-To get started, open `js/app.js` and start building out the app's functionality
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## Dependencies
+
+There is only one depend file for this project app.js which is found in the js folder, when downloading the project ensure the js folder and app.js file is included with the project
+
+
