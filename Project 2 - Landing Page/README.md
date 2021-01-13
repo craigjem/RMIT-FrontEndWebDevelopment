@@ -5,6 +5,7 @@ CJ Technical Blog
 ## Table of Contents
 
 * [Instructions](#instructions)
+* [Dependencies](#dependencies)
 
 ## Instructions
 
