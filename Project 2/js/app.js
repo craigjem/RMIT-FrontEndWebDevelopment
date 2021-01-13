@@ -118,30 +118,64 @@ for (var i = 0; i < navList.length; i++) {
 }
 
 
+// Highlight current section on scroll
+function navHighlight() {
+  let scrollTop = $(document).scrollTop();
 
-// Highlight current section in the navigation bar
-$(window).on("scroll", function() {
-  let currentPos = $(window).scrollTop();
+  document.querySelector('#navbar__list li a').each(function() {
+  
+      let xPos = $(this).position();
+      let sectionPos = xPos.top;
+      let sectionHeight = $(this).height();
+      let overall = scrollTop + sectionHeight;
 
-$('#navbar__list li a').each(function() {
-  let sectionLink = $(this);
+      if ((scrollTop + 20) >= sectionPos && scrollTop < overall) {
+          $(this).addClass("your-active-class");
+          $(this).prevAll().removeClass("your-active-class");
+      }
+
+      else if (scrollTop <= overall) {
+          $(this).removeClass("your-active-class");
+      }
+
+      var xIndex = $(".your-active-class").index();
+      var accIndex = xIndex + 1;
+
+      $("nav li:nth-child(" + accIndex + ")").addClass("your-active-class").siblings().removeClass("your-active-class");
+  });
+}
+
+
+// Listens for scrolling event
+window.onscroll = function() {
+  navHighlight();
+};
+
+
+//Code that I have tried
+
+//$(window).on("scroll", function() {
+//  let currentPos = $(window).scrollTop();
+
+//$('#navbar__list li a').each(function() {
+//  let sectionLink = $(this);
 
 // capture the height of the navbar
-  let navHeight = $('.navbar__menu').outerHeight() + 1;
-  let section = $(sectionLink.attr('href'));
+//  let navHeight = $('.navbar__menu').outerHeight() + 1;
+//  let section = $(sectionLink.attr('href'));
 
 // subtract the navbar height from the top of the section
-if(section.position().top - navHeight  <= currentPos && sectionLink.offset().top + section.height()> currentPos) {
+//if(section.position().top - navHeight  <= currentPos && sectionLink.offset().top + section.height()> currentPos) {
   
-  $('#navbar__list li').removeClass('your-active-class');
-  sectionLink.parent().addClass('your-active-class');
-  $(".your-active-class h2").style.cssText = 'color: red';
-  } else {
-  sectionLink.parent().removeClass('your-active-class');
-  $("btn").style.cssText = 'color: white';
-  }
- });        
-});  
+ // $('#navbar__list li').removeClass('your-active-class');
+//  sectionLink.parent().addClass('your-active-class');
+//  $(".your-active-class h2").style.cssText = 'color: red';
+ // } else {
+ // sectionLink.parent().removeClass('your-active-class');
+ // $("btn").style.cssText = 'color: white';
+ // }
+// });        
+//});  
   
 
 
