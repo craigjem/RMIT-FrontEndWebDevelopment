@@ -121,21 +121,22 @@ for (var i = 0; i < navList.length; i++) {
 // Highlight current section on scroll
 function navHighlight() {
   
-  let scrollTop = document.scrollingElement;
+  let scrTop = document.scrollingElement;
+  scrTop.scrollTop = 0;
   
   document.querySelector('#navbar__list li a').each(function() {
   
       let xPos = $(this).position();
       let sectionPos = xPos.top;
       let sectionHeight = $(this).height();
-      let overall = scrollTop + sectionHeight;
+      let overall = scrTop + sectionHeight;
 
-      if ((scrollTop + 20) >= sectionPos && scrollTop < overall) {
+      if ((scrTop + 20) >= sectionPos && scrollTop < overall) {
           $(this).addClass("your-active-class");
           $(this).prevAll().removeClass("your-active-class");
       }
 
-      else if (scrollTop <= overall) {
+      else if (scrTop <= overall) {
           $(this).removeClass("your-active-class");
       }
 
