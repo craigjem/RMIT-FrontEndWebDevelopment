@@ -132,15 +132,16 @@ function navHighlight() {
       let overall = scrTop + sectionHeight;
 
       if ((scrTop + 20) >= sectionPos && scrollTop < overall) {
-          $(this).addClass("your-active-class");
-          $(this).prevAll().removeClass("your-active-class");
+        xPos.classList.add("your-active-class");
+        xPos.prevAll().classList.remove("your-active-class");
       }
 
       else if (scrTop <= overall) {
-          $(this).removeClass("your-active-class");
+        xPos.classList.remove("your-active-class");
+        xPos.style.cssText = 'color: white;';
       }
 
-      var xIndex = $(".your-active-class").index();
+      var xIndex = ".your-active-class".index();
       var accIndex = xIndex + 1;
 
       $("nav li:nth-child(" + accIndex + ")").addClass("your-active-class").siblings().removeClass("your-active-class");
