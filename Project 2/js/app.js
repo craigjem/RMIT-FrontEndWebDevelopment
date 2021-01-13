@@ -120,8 +120,9 @@ for (var i = 0; i < navList.length; i++) {
 
 // Highlight current section on scroll
 function navHighlight() {
-  let scrollTop = $(document).scrollTop();
-
+  
+  let scrollTop = document.scrollingElement;
+  
   document.querySelector('#navbar__list li a').each(function() {
   
       let xPos = $(this).position();
