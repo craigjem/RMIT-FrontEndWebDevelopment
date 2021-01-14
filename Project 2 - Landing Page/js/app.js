@@ -124,27 +124,20 @@ function navHighlight() {
   let scrTop = document.scrollingElement;
   scrTop.scrollTop = 0;
   
-  document.querySelector('#navbar__list li a').each(function() {
-  
-      let xPos = $(this).position();
-      let sectionPos = xPos.top;
-      let sectionHeight = $(this).height();
-      let overall = scrTop + sectionHeight;
+  let div = document.getElementById('#navbar__list li a').each(function() {
 
-      if ((scrTop + 20) >= sectionPos && scrollTop < overall) {
-        xPos.classList.add("your-active-class");
-        xPos.prevAll().classList.remove("your-active-class");
+      let rect = div.getBoundingClientRect();
+
+      let navHeight = rect.outerHeight() + 1;
+      let section = div.attr('href');
+
+      // subtract the navbar height from the top of the section
+      if(section.position().top - navHeight  <= rect && div.offset().top + section.height()> rect) {
+      div.classList.remove("your-active-class");
+      div.parent().classList.add("your-active-class");
+      } else {
+      div.parent().classList.remove("your-active-class");
       }
-
-      else if (scrTop <= overall) {
-        xPos.classList.remove("your-active-class");
-        xPos.style.cssText = 'color: white;';
-      }
-
-      var xIndex = ".your-active-class".index();
-      var accIndex = xIndex + 1;
-
-      $("nav li:nth-child(" + accIndex + ")").addClass("your-active-class").siblings().removeClass("your-active-class");
   });
 }
 

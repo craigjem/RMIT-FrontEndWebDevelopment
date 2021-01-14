@@ -1,0 +1,49 @@
+$(window).on("scroll", function() {
+  var currentPos = $(window).scrollTop();
+
+  $('.nav li a').each(function() {
+    var sectionLink = $(this);
+    // capture the height of the navbar
+    var navHeight = $('#nav-wrapper').outerHeight() + 1;
+    var section = $(sectionLink.attr('href'));
+
+    // subtract the navbar height from the top of the section
+    if(section.position().top - navHeight  <= currentPos && sectionLink.offset().top + section.height()> currentPos) {
+      $('.nav li').removeClass('active');
+      sectionLink.parent().addClass('active');
+    } else {
+      sectionLink.parent().removeClass('active');
+    }
+  });        
+});
+
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_getboundingclientrect
+
+<script>
+function myFunction() {
+  var div = document.getElementById("myDiv");
+  var rect = div.getBoundingClientRect();
+  x = rect.left;
+  y = rect.top;
+  w = rect.width;
+  h = rect.height;
+  alert ("Left: " + x + ", Top: " + y + ", Width: " + w + ", Height: " + h);
+}
+</script>
+
+
+Add the scrolling functionality to highlight the current section & nav-item, as per the requirements. 
+Suppose the section is very large, one has to scroll to the top of that section to know which section is being viewed currently. 
+
+Refer: https://stackoverflow.com/questions/36121450/highlighting-current-section-in-navbar
+
+Hint: Use `getBoundingClientRect()` to get the position of the section on the viewport while the user scrolls & if it lies in the viewport 
+add the active class else remove it.
+
+Refer: https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+
+Profile image
+Ayush M
+Mentor
+
+about 18 hours ago - 13/01/2021
