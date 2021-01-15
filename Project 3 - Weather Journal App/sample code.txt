@@ -23,3 +23,20 @@ const retrieveData = async (url='') =>{
     // appropriately handle the error
   }
 }
+
+
+Then on the server side to actually add the sent data to our app, we would use this code:
+
+app.post('/addAnimal', addAnimal);
+
+function addAnimal(req,res){
+
+  newEntry = {
+    animal: req.body.animal,
+    facts: req.body.fact,
+    fav: req.body.fav
+  }
+
+  animalData.push(newEntry)
+  console.log(animalData)
+}
