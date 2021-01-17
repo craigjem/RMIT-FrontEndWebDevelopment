@@ -123,23 +123,68 @@ function navHighlight() {
   
   let scrTop = document.scrollingElement;
   scrTop.scrollTop = 0;
+ 
+  // Get navigation menu
+  let set_active_class = document.getElementById('navbar__list');
+    
+  // Set variable to find section in viewport
+  let rect = set_active_class.getBoundingClientRect();
+               
+  if ( set_active_class != null){
+                 //find the current active section
+                 let s = set_active_class.querySelector("a.your-active-class");
+                 
+                 //check if the current active section is the same as the selected section
+                 if ( s != null){
+                                console.log("remove active");
+                                //only change if they are differnt
+                                if ( s.getAttribute("href") != "#" + section ){
+                                
+                                               s.classList.toggle("your-active-class", false);
+                                               //set the selected section to active
+                                               s = set_active_class.querySelector("a[href='#" + section + "']");
+                                               s.classList.toggle("your-active-class", true);
+                                }
+                                
+                 }
+                 else {
+                                //set the selected section to active
+                                s = set_active_class.querySelector("a[href='#" + section + "']");
+                                if ( s != null) {
+                                               console.log(s);
+                                               console.log(section);
+                                               console.log(s.classList);
+                                               console.log(s.classList.length);
+                                               s.classList.toggle("your-active-class", true); 
+                                }
+                                
+                 }
+  }
+
+
+
+
+
+
+
+
   
-  let div = document.getElementById('#navbar__list li a').each(function() {
+//  let div = document.getElementById('#navbar__list li a').each(function() {
 
-      let rect = div.getBoundingClientRect();
+ //     let rect = div.getBoundingClientRect();
 
-      let navHeight = rect.outerHeight() + 1;
-      let section = div.attr('href');
+  //    let navHeight = rect.outerHeight() + 1;
+  //    let section = div.attr('href');
 
       // subtract the navbar height from the top of the section
-      if(section.position().top - navHeight  <= rect && div.offset().top + section.height()> rect) {
-      div.classList.remove("your-active-class");
-      div.parent().classList.add("your-active-class");
-      } else {
-      div.parent().classList.remove("your-active-class");
-      }
-  });
-}
+ //     if(section.position().top - navHeight  <= rect && div.offset().top + section.height()> rect) {
+ //     div.classList.remove("your-active-class");
+ //     div.parent().classList.add("your-active-class");
+  //    } else {
+  //    div.parent().classList.remove("your-active-class");
+ //     }
+//  });
+//}
 
 
 // Listens for scrolling event
