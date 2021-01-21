@@ -121,14 +121,46 @@ for (var i = 0; i < navList.length; i++) {
 // Highlight current section on scroll
 function navHighlight() {
   
-  let scrTop = document.scrollingElement;
-  scrTop.scrollTop = 0;
- 
-  // Get navigation menu
+  // Get navigation menu id
   let set_active_class = document.getElementById('navbar__list');
     
   // Set variable to find section in viewport
-  let rect = set_active_class.getBoundingClientRect();
+  const view = section.getBoundingClientRect();
+       if( view.top >=0 && view.left >=0 ){
+
+          //find the current active section
+          let currentActive = set_active_class.querySelector("a.your-active-class");
+                 
+          //check if the current active section is the same as the selected section
+          if ( currentActive != null){
+                         console.log("remove active");
+                         //only change if they are differnt
+                         if ( currentActive.getAttribute("href") != "#" + section ){
+                         
+                             currentActive.classList.toggle("your-active-class", false);
+                              //set the selected section to active
+                             currentActive = set_active_class.querySelector("a[href='#" + section + "']");
+                             currentActive.classList.toggle("your-active-class", true);
+                         }          
+          } else {
+            //set the selected section to active
+            let currentActive = set_active_class.querySelector("a[href='#" + section + "']");
+            if ( currentActive != null) {
+                           console.log(s);
+                           console.log(section);
+                           console.log(s.classList);
+                           console.log(s.classList.length);
+                currentActive.classList.toggle("your-active-class", true); 
+            }
+          }
+        
+      } else {
+        
+        
+      
+      
+      }
+
                
   if ( set_active_class != null){
                  //find the current active section
@@ -161,7 +193,7 @@ function navHighlight() {
                  }
   }
 
-
+}
 
 
 
@@ -188,9 +220,10 @@ function navHighlight() {
 
 
 // Listens for scrolling event
-window.onscroll = function() {
+document.addEventListener('scroll', function(){
   navHighlight();
-};
+})
+
 
 
 //Code that I have tried
