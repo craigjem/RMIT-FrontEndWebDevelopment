@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/playliststyle.css">
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+  
+
+
+</head>
+
+<body>
+
+  <video autoplay loop id="video-background" muted plays-inline>
+    <source src="video/christian/Yancy-GodStrong.mp4" type="video/mp4">
+  </video>
+
+  <div class="background-image"> 
+    
+    <div style="margin-top: 2%;" id="playlist">
+      <div class="noScrollingText">
+         <a id="authorHeading"><h1>Yancy</h1></a>
+         <a id="albumHeading"><h2>Little Praise Party</h2></a>
+      </div>
+        <div class="songList">
+           <p id="active">1. Super Wonderful</p>
+           <p>2. Praise The Lord Every Day</p>
+           <p>3. Taste And See</p>
+           <p>4. My God is Number One</p>
+           <p>5. Stop and Go</p>
+           <p>6. Obey</p>
+           <p>7. I Love you Lord</p>
+           <p>8. Lord, I Thank You</p>
+           <p>9. There Are Promises</p>
+           <p>10. Joyful Noise</p>
+           <p>11. Gonna Serve</p>
+           <p>12. I Will Pray</p>
+           <p>13. The Bunny Song (Easter)</p>
+           <p>14. It's A Happy Day (Easter)</p>
+           <p>15. Best Present Ever (Christmas)</p>
+        </div>
+      
+    
+    </div>
+  </div> 
+
+    <div class="audio-box">
+        <button class="btn flip-list-play">Play</button>
+	      <button class="btn flip-list-next">Next</button>
+	      <button class="btn flip-list-back">Previous</button>
+	      <button class="btn flip-list-move">Shuffle</button>
+ 
+       <audio style="margin-left: 15px;width: 90%;" id="audio" preload="auto" tabindex="0" controls type="audio/wav" autoplay>
+          <source type="audio/wav" src="music/Yancy/Track 1.wav">
+       </audio>
+    </div>
+
+
+    <script>
+      
+    </script>
+
+    <script>    
+    function selectActiveSong() {
+      // Define variables
+      let activeSong = document.getElementById("active");
+      activeSong.style.cssText = 'color: red';
+      let getSongList = document.querySelector("p");
+      // remove current active song and style
+      $("#active").removeAttr("id style");     
+      // loop to next song in the playerlist
+               
+      getSongList = getSongList.nextElementSibling;
+
+         if ( getSongList != null ) {
+
+            // Add active id to next song
+            getSongList.setAttribute("id", "active");
+            // Set active to color red
+            getSongList.style.cssText = 'color: red';          
+
+         } else {
+            // Add active id to next song
+            x = document.querySelector(".songList");
+            x = getSongList.firstChild;
+            x.setAttribute("id", "active");
+            // Set active to color red
+            $("#active").css("color","red"); 
+
+         }
+          
+    
+    }
+    
+    </script>  
+
+<script>    
+  function previousActiveSong() {
+    
+    // Set active style to white
+    //activeSong.style.cssText = 'color: white';
+    // remove current active song
+    $("#active").removeAttr("id style");     
+    // loop to next song in the playerlist
+    getSongList = getSongList.previousElementSibling;
+    // Add active id to next song
+    getSongList.setAttribute("id", "active");
+    // Set active to color red
+    getSongList.style.cssText = 'color: red';  
+  
+  }
+  
+  </script>  
+
+
+<script type="text/javascript">
+
+// Video Playlist 
+
+var nextSong = ["music/Yancy/Track 1.wav",
+"music/Yancy/Track 2.wav",
+"music/Yancy/Track 3.wav",
+"music/Yancy/Track 4.wav",
+"music/Yancy/Track 5.wav",
+"music/Yancy/Track 6.wav",
+"music/Yancy/Track 7.wav",
+"music/Yancy/Track 8.wav",
+"music/Yancy/Track 9.wav",
+"music/Yancy/Track 10.wav",
+"music/Yancy/Track 11.wav",
+"music/Yancy/Track 12.wav",
+"music/Yancy/Track 13.wav",
+"music/Yancy/Track 14.wav",
+"music/Yancy/Track 15.wav",];
+var curSong = 0;
+audio.volume = .70;
+var audioPlayer = document.getElementById('audio');
+audioPlayer.onended = function(){
+selectActiveSong();	
+++curSong; 
+document.getElementById("playlist").style.display = 'block';
+    if(curSong < nextSong.length){   
+      audioPlayer.src = nextSong[curSong]; 
+    } 
+    if(curSong >= nextSong.length){
+        curSong = 0;
+        audioPlayer.src = nextSong[curSong];
+    }
+    };       
+
+</script>
+
+<script>
+  $(".background-image").click(function() {
+     window.close();
+  });
+</script>
+
+<script>
+$(".flip-list-play").click(function() {
+ var audioPlayer = document.getElementById("audio");
+ audioPlayer.src = nextSong[curSong];  
+});//]]> 
+</script>
+
+<script>
+$(".flip-list-next").click(function() {
+ // Hightlights next active song
+ selectActiveSong();	
+ var audioPlayer = document.getElementById("audio");
+                ++curSong;
+ audioPlayer.src = nextSong[curSong]; 
+});//]]> 
+</script>
+
+<script>
+$(".flip-list-back").click(function() {
+  previousActiveSong() 
+ var audioPlayer = document.getElementById("audio");
+                --curSong;
+ audioPlayer.src = nextSong[curSong]; 
+});//]]> 
+</script>
+
+<script>
+$(".flip-list-move").click(function() {
+  $(".flip-list-move").css("background-color","blue");
+  $(".flip-list-move").css("color","white");
+var audioPlayer = document.getElementById("audio");
+var curSong = Math.floor(Math.random() * 15) + 1;
+audioPlayer.src = nextSong[curSong];
+audioPlayer.addEventListener("ended", playnext);
+function playnext(){
+          curSong = Math.floor(Math.random() * 15) + 1;
+    if(curSong < nextSong.length){    		
+        audioPlayer.src = nextSong[curSong]; 
+    } 
+}  
+});
+</script>
+
+
+</body>
+
+</html>
+

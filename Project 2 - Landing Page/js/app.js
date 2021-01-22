@@ -161,39 +161,43 @@ function navHighlight() {
       
       }
 
-               
-  if ( set_active_class != null){
+    
+      
+
+  // Test code that I worked with Software Developer
+
+  //if ( set_active_class != null){
                  //find the current active section
-                 let s = set_active_class.querySelector("a.your-active-class");
+ //                let s = set_active_class.querySelector("a.your-active-class");
                  
                  //check if the current active section is the same as the selected section
-                 if ( s != null){
-                                console.log("remove active");
-                                //only change if they are differnt
-                                if ( s.getAttribute("href") != "#" + section ){
-                                
-                                               s.classList.toggle("your-active-class", false);
-                                               //set the selected section to active
-                                               s = set_active_class.querySelector("a[href='#" + section + "']");
-                                               s.classList.toggle("your-active-class", true);
-                                }
-                                
-                 }
-                 else {
+ //                if ( s != null){
+ //                               console.log("remove active");
+ //                               //only change if they are differnt
+ //                               if ( s.getAttribute("href") != "#" + section ){
+ //                               
+ //                                              s.classList.toggle("your-active-class", false);
+ //                                              //set the selected section to active
+ //                                              s = set_active_class.querySelector("a[href='#" + section + "']");
+ //                                              s.classList.toggle("your-active-class", true);
+ //                               }
+ //                               
+ //                }
+ //                else {
                                 //set the selected section to active
-                                s = set_active_class.querySelector("a[href='#" + section + "']");
-                                if ( s != null) {
-                                               console.log(s);
-                                               console.log(section);
-                                               console.log(s.classList);
-                                               console.log(s.classList.length);
-                                               s.classList.toggle("your-active-class", true); 
-                                }
-                                
-                 }
-  }
-
-}
+ //                               s = set_active_class.querySelector("a[href='#" + section + "']");
+ //                               if ( s != null) {
+ //                                              console.log(s);
+ //                                              console.log(section);
+ //                                              console.log(s.classList);
+ //                                              console.log(s.classList.length);
+  //                                             s.classList.toggle("your-active-class", true); 
+ //                               }
+ //                               
+ //                }
+ // }
+//
+//}
 
 
 
